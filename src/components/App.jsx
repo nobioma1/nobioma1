@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppContainer, GlobalCss } from '../styles';
 import Home from './Home';
 import About from './About';
@@ -7,11 +7,15 @@ import ProjectList from './ProjectList';
 import Footer from './Footer';
 
 const App = () => {
+  const [mode, setMode] = useState('light');
+
+  const selectMode = mode => setMode(mode);
+
   return (
     <React.Fragment>
-      <GlobalCss />
+      <GlobalCss mode={mode} />
       <AppContainer>
-        <Header />
+        <Header mode={mode} selectMode={selectMode} />
         <Home />
         <About />
         <ProjectList />

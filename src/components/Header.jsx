@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import { HeaderContainer, Contact, Icon } from '../styles';
+import { WiDaySunny, WiMoonAltWaxingCrescent4 } from 'react-icons/wi';
+import { HeaderContainer, Contact, Icon, SwitchContainer } from '../styles';
 
-const Header = () => {
+const Header = props => {
   return (
     <HeaderContainer>
       <Contact>
@@ -27,6 +28,10 @@ const Header = () => {
           </a>
         </Icon>
       </Contact>
+      <SwitchContainer>
+        <WiDaySunny onClick={() => props.selectMode('light')} />
+        <WiMoonAltWaxingCrescent4 onClick={() => props.selectMode('dark')} />
+      </SwitchContainer>
     </HeaderContainer>
   );
 };

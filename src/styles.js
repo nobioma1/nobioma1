@@ -17,6 +17,7 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     font-weight: lighter;
+    color: ${props => (props.mode === 'dark' ? 'white;' : 'null')};
   }
   @media (max-width: 500px) {
     *,
@@ -34,7 +35,7 @@ export const GlobalCss = createGlobalStyle`
       'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: ${props => (props.color ? props.color : BG_COLOR)};
+    background-color: ${props => (props.mode === 'dark' ? 'black' : BG_COLOR)};
   }
 `;
 
@@ -76,8 +77,6 @@ export const HeaderContainer = styled.div`
   justify-content: flex-end;
 `;
 
-export const NavItem = styled.p``;
-
 export const Contact = styled.div`
   width: 40%;
   display: flex;
@@ -101,6 +100,31 @@ export const Icon = styled.div`
   }
 `;
 
+export const SwitchContainer = styled.div`
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  background-color: #e8e8e8;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0.5;
+  z-index: 999;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    font-size: ${MEDIUM_FONT};
+    cursor: pointer;
+
+    & > :nth-of-type(1) {
+      color: ${BLUE};
+    }
+  }
+`;
+
 // Home Styles
 export const HomeContainer = styled.div`
   display: flex;
@@ -110,7 +134,7 @@ export const HomeContainer = styled.div`
 
   @media (max-width: 800px) {
     width: 100%;
-    height: 300px;
+    height: 380px;
   }
 
   @media (max-width: 500px) {
