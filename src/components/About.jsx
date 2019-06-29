@@ -8,7 +8,7 @@ import {
   CodingAvatar,
 } from '../styles';
 import coding from '../assets/coding.svg';
-import data from '../assets/data';
+import data from '../data';
 
 const About = () => {
   return (

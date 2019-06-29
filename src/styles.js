@@ -16,7 +16,7 @@ export const GlobalCss = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    font-weight: lighter;
+    font-weight: 200;
     color: ${props => (props.mode === 'dark' ? 'white;' : 'null')};
   }
   @media (max-width: 500px) {
@@ -213,7 +213,71 @@ export const Lang = styled.div`
 `;
 
 // ProjectList
-export const Projects = styled.div``;
+export const Projects = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`;
+
+export const Project = styled.div`
+  width: calc(95% / 3);
+  border: 1px solid lightgray;
+  margin: 5px 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 180px;
+  }
+
+  @media (max-width: 800px) {
+    width: calc(95% / 2);
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
+
+export const ProjectInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 90px;
+
+  h4 {
+    font-size: ${TEXT_FONT};
+  }
+
+  p {
+    font-size: ${SMALL_FONT};
+
+    span {
+      text-decoration: underline;
+      margin-right: 3px;
+    }
+  }
+`;
+
+export const Links = styled.div`
+  position: absolute;
+  bottom: 0;
+  justify-content: space-around;
+
+  a {
+    font-size: 3.2rem;
+    color: ${BLUE};
+    width: 20px;
+    margin: 10px;
+
+    @media (max-width: 500px) {
+      font-size: 3.9rem;
+    }
+  }
+`;
 
 // Footer
 export const FooterContainer = styled.div`
