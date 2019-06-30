@@ -18,6 +18,8 @@ export const GlobalCss = createGlobalStyle`
     font-size: 62.5%;
     font-weight: 300;
     color: ${props => (props.mode === 'dark' ? 'white;' : 'null')};
+    ${props =>
+      props.mode === 'dark' ? 'transition: 2s ease-in-out;' : 'null'};
   }
   @media (max-width: 500px) {
     *,
@@ -36,6 +38,8 @@ export const GlobalCss = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: ${props => (props.mode === 'dark' ? 'black' : BG_COLOR)};
+    ${props =>
+      props.mode === 'dark' ? 'transition: 2s ease-out;' : 'transition: 1s ease-in;'};
   }
 `;
 
