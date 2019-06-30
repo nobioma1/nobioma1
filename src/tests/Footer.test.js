@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 describe('Footer', () => {
   it('Footer Should Match Snapshot', () => {
-    const tree = renderer.create(<Footer />);
+    const tree = renderer.create(<Footer />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

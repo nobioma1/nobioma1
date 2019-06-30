@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 describe('Header', () => {
   it('Header Should Match Snapshot', () => {
-    const tree = renderer.create(<Header />);
+    const tree = renderer.create(<Header />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

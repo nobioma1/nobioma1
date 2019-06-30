@@ -5,7 +5,7 @@ import ProjectList from '../components/ProjectList';
 
 describe('ProjectList', () => {
   it('ProjectList Should Match Snapshot', () => {
-    const tree = renderer.create(<ProjectList />);
+    const tree = renderer.create(<ProjectList />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

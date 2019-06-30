@@ -5,7 +5,7 @@ import App from '../components/App';
 
 describe('App', () => {
   it('App Should Match Snapshot', () => {
-    const tree = renderer.create(<App />);
+    const tree = renderer.create(<App />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
