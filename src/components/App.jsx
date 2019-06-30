@@ -6,9 +6,10 @@ import Header from './Header';
 import ProjectList from './ProjectList';
 import Footer from './Footer';
 
+
 const App = () => {
   const [mode, setMode] = useState('light');
-
+  
   const selectMode = mode => setMode(mode);
 
   return (
@@ -26,3 +27,4 @@ const App = () => {
 };
 
 export default App;
+

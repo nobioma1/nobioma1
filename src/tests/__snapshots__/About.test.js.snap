@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About About Should Match Snapshot 1`] = `
+<div
+  className="sc-iwsKbI ihjwvd"
+>
+  <div
+    className="sc-gZMcBi kKDAKj"
+  >
+    <div
+      className="sc-bdVaJa cdJaUk"
+    >
+      <img
+        alt="Coding"
+        src="coding.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="sc-gqjmRU jOGXJO"
+  >
+    <h1
+      className="sc-bwzfXH irohca"
+    >
+      About Me
+    </h1>
+    <p>
+      Hello, I'm a Full-Stack Engineer based in Nigeria. 
+    Loving every bit of what I do, creating solutions to real problems that
+    can be solved using technology and also improving already existing solutions.
+    </p>
+    <p>
+      I'm good at:
+    </p>
+    <div
+      className="sc-VigVT cTLLZs"
+    >
+      <p>
+        HTML
+      </p>
+      <p>
+        CSS
+      </p>
+      <p>
+        JavaScript
+      </p>
+      <p>
+        React
+      </p>
+      <p>
+        NodeJs
+      </p>
+    </div>
+  </div>
+</div>
+`;

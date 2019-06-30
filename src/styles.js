@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const BG_COLOR = '#FCFAFA';
 const BLUE = '#4E6AC6';
@@ -16,7 +16,7 @@ export const GlobalCss = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    font-weight: 200;
+    font-weight: 300;
     color: ${props => (props.mode === 'dark' ? 'white;' : 'null')};
   }
   @media (max-width: 500px) {
@@ -258,6 +258,7 @@ export const ProjectInfo = styled.div`
     span {
       text-decoration: underline;
       margin-right: 3px;
+      font-size: 1.3rem;
     }
   }
 `;

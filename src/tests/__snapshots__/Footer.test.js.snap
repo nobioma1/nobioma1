@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Footer Should Match Snapshot 1`] = `
+<div
+  className="sc-kAzzGY iedvNq"
+>
+  <p>
+    Noble Obioma © 2019
+  </p>
+</div>
+`;
