@@ -18,19 +18,22 @@ exports[`ProjectList ProjectList Should Match Snapshot 1`] = `
         src="luncher.png"
       />
       <div
-        className="sc-jzJRlG kTznpJ"
+        className="sc-jzJRlG hHMfSJ"
       >
         <h4>
           Luncher
         </h4>
         <p>
           <span>
-            React
-            
+            <span
+              className="sc-cSHVUG bdaTcy"
+            >
+              React
+            </span>
           </span>
         </p>
         <div
-          className="sc-cSHVUG drwNGt"
+          className="sc-kAzzGY dNvWZw"
         >
           <a
             href="https://github.com/luncher-lambda-buildweek/FrontEnd"
@@ -87,19 +90,22 @@ exports[`ProjectList ProjectList Should Match Snapshot 1`] = `
         src="esse.png"
       />
       <div
-        className="sc-jzJRlG kTznpJ"
+        className="sc-jzJRlG hHMfSJ"
       >
         <h4>
           Essentialism
         </h4>
         <p>
           <span>
-            Javascript
-            
+            <span
+              className="sc-cSHVUG bdaTcy"
+            >
+              Javascript
+            </span>
           </span>
         </p>
         <div
-          className="sc-cSHVUG drwNGt"
+          className="sc-kAzzGY dNvWZw"
         >
           <a
             href="https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble"
@@ -156,23 +162,29 @@ exports[`ProjectList ProjectList Should Match Snapshot 1`] = `
         src="politico.png"
       />
       <div
-        className="sc-jzJRlG kTznpJ"
+        className="sc-jzJRlG hHMfSJ"
       >
         <h4>
           Politico
         </h4>
         <p>
           <span>
-            Javascript
-            ,
+            <span
+              className="sc-cSHVUG bdaTcy"
+            >
+              Javascript
+            </span>
           </span>
           <span>
-            NodeJs
-            
+            <span
+              className="sc-cSHVUG bdaTcy"
+            >
+              NodeJs
+            </span>
           </span>
         </p>
         <div
-          className="sc-cSHVUG drwNGt"
+          className="sc-kAzzGY dNvWZw"
         >
           <a
             href="https://github.com/nobioma1/Politico"
