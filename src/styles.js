@@ -213,6 +213,13 @@ export const Lang = styled.div`
     font-size: ${SMALL_FONT};
     padding: 5px;
     font-weight: 450;
+    display: flex;
+    align-items: center;
+
+    i svg {
+      font-size: ${MEDIUM_FONT};
+      margin-right: 5px;
+  }
   }
 `;
 
