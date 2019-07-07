@@ -17,6 +17,8 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     font-weight: 300;
+    z-index: 1;
+
     color: ${props => (props.mode === 'dark' ? 'white;' : 'null')};
     ${props =>
       props.mode === 'dark' ? 'transition: 2s ease-in-out;' : 'null'};
@@ -39,7 +41,9 @@ export const GlobalCss = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: ${props => (props.mode === 'dark' ? 'black' : BG_COLOR)};
     ${props =>
-      props.mode === 'dark' ? 'transition: 2s ease-out;' : 'transition: 1s ease-in;'};
+      props.mode === 'dark'
+        ? 'transition: 2s ease-out;'
+        : 'transition: 1s ease-in;'};
   }
 `;
 
@@ -219,7 +223,7 @@ export const Lang = styled.div`
     i svg {
       font-size: ${MEDIUM_FONT};
       margin-right: 5px;
-  }
+    }
   }
 `;
 
@@ -261,17 +265,19 @@ export const ProjectInfo = styled.div`
 
   h4 {
     font-size: ${TEXT_FONT};
+    margin-bottom: 5px;
   }
 
   p {
     font-size: ${SMALL_FONT};
-
-    span {
-      text-decoration: underline;
-      margin-right: 3px;
-      font-size: 1.3rem;
-    }
   }
+`;
+
+export const Tag = styled.span`
+  border: 1px solid lightgray;
+  padding: 3px;
+  font-size: 1.15rem;
+  margin-right: 3px;
 `;
 
 export const Links = styled.div`
