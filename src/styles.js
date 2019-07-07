@@ -219,6 +219,11 @@ export const Lang = styled.div`
     font-weight: 450;
     display: flex;
     align-items: center;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     i svg {
       font-size: ${MEDIUM_FONT};
@@ -242,6 +247,11 @@ export const Project = styled.div`
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   position: relative;
+  transition: 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   img {
     width: 100%;
