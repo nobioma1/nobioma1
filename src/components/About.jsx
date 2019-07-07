@@ -12,7 +12,7 @@ import {
 import coding from '../assets/coding.svg';
 import data from '../data';
 
-const icon = name => {
+export const icon = (name='') => {
   switch (name.toLowerCase()) {
     case 'html':
       return <FaHtml5 />;

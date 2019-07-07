@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { Title, Projects, Project, ProjectInfo, Links } from '../styles';
+import { Title, Projects, Project, ProjectInfo, Links, Tag } from '../styles';
 import data from '../data';
 
 const ProjectList = () => {
@@ -19,8 +19,7 @@ const ProjectList = () => {
               <p>
                 {project.tech.map((tech, index) => (
                   <span key={index}>
-                    {tech}
-                    {project.tech.length - 1 !== index ? ',' : ''}
+                    <Tag>{tech}</Tag>
                   </span>
                 ))}
               </p>
