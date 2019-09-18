@@ -6,7 +6,6 @@ import About from '../components/About';
 describe('About', () => {
   it('About Should Match Snapshot', () => {
     const tree = renderer.create(<About />).toJSON();
-
     expect(tree).toMatchSnapshot();
   });
 });
