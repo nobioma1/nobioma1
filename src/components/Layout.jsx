@@ -5,7 +5,7 @@ const LayoutContainer = styled.section`
   min-height: ${props => (props.fullHeight ? '100vh' : 'auto')};
   width: 100%;
   display: flex;
-  padding: 50px 5px 10px 5px;
+  padding: 50px 10px 10px 10px;
   justify-content: center;
   background-color: ${props => (props.bg ? props.bg : 'none')};
 
