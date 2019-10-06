@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import SimpleIcons from 'simple-icons-react-component';
 
-import Layout from './Layout';
+import Layout from '../components/Layout';
 import data from '../data';
 import avatar from '../assets/noble.jpg';
+import icons from '../utils/icons';
 
 const AboutContainer = styled.div`
   display: flex;
@@ -42,7 +42,8 @@ const AboutInfo = styled.div`
 
   @media (min-width: 800px) {
     flex-direction: row;
-    align-items: flex-start;
+    margin-top: 0px;
+    align-items: center;
     justify-content: space-between;
 
     & > div {
@@ -56,7 +57,6 @@ const AboutInfo = styled.div`
     }
 
     & > p {
-      padding-top: 20px;
       width: 70%;
     }
   }
@@ -96,29 +96,6 @@ const Lang = styled.div`
   }
 `;
 
-const icon = (name = '') => {
-  switch (name.toLowerCase()) {
-    case 'html':
-      return <SimpleIcons name="HTML5" />;
-    case 'css':
-      return <SimpleIcons name="CSS3" />;
-    case 'javascript':
-      return <SimpleIcons name="JavaScript" />;
-    case 'node.js':
-      return <SimpleIcons name="Node.js" />;
-    case 'reactjs':
-      return <SimpleIcons name="React" />;
-    case 'python':
-      return <SimpleIcons name="Python" />;
-    case 'graphql':
-      return <SimpleIcons name="GraphQL" />;
-    case 'express':
-      return <SimpleIcons name="JavaScript" />;
-    default:
-      return;
-  }
-};
-
 const About = () => {
   return (
     <Layout bg="#FFFFFF" title="About" id="about">
@@ -133,7 +110,7 @@ const About = () => {
         <Lang>
           {data.skills.map((skill, index) => (
             <div key={index}>
-              {icon(skill)}
+              {icons(skill)}
               <p>{skill}</p>
             </div>
           ))}
