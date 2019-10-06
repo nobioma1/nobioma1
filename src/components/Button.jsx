@@ -35,7 +35,7 @@ export const HomeButton = ({ link }) => {
       to={link.toLowerCase()}
       spy={true}
       smooth={true}
-      offset={-70}
+      offset={-100}
       duration={500}
     >
       View About Me <MdArrowDownward />
