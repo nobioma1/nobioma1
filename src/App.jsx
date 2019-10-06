@@ -3,9 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 
 import Particles from './components/Particles';
 import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
+import Home from './sections/Home';
+import About from './sections/About';
+import Projects from './sections/Projects';
 
 const GlobalStyle = createGlobalStyle`
   *,
