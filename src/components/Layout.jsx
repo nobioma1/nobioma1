@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LayoutContainer = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
-  padding: 50px 5px 5px 5px;
+  padding: 50px 5px 10px 5px;
   justify-content: center;
   background-color: ${props => (props.bg ? props.bg : 'none')};
+
+  @media (min-width: 500px) {
+    padding: 50px 10px 5px 10px;
+  }
 
   & > div {
     display: flex;
@@ -17,11 +21,18 @@ const LayoutContainer = styled.section`
     flex-direction: column;
 
     & > h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #000;
+      padding: 5px;
     }
 
     @media (min-width: 800px) {
-      width: 850px;
+      width: 820px;
+
+      & > h1 {
+        font-size: 3.5rem;
+      }
     }
   }
 `;
