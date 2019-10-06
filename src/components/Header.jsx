@@ -13,6 +13,7 @@ const HeaderContainer = styled.div`
   border-bottom: 3px solid #4e6ac6;
   padding: 10px;
   background-color: #081c35;
+  z-index: 999;
 
   svg {
     font-size: 3.5rem;
