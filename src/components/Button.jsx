@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MdArrowDownward } from 'react-icons/md';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const LinkButton = styled(Link)`
   background: none;
