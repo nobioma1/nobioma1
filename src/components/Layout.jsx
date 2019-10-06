@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LayoutContainer = styled.section`
-  min-height: 100vh;
+  min-height: ${props => (props.fullHeight ? '100vh' : 'auto')};
   width: 100%;
   display: flex;
   padding: 50px 5px 10px 5px;
@@ -10,7 +10,7 @@ const LayoutContainer = styled.section`
   background-color: ${props => (props.bg ? props.bg : 'none')};
 
   @media (min-width: 500px) {
-    padding: 50px 10px 5px 10px;
+    padding: 50px 10px;
   }
 
   & > div {
@@ -28,7 +28,7 @@ const LayoutContainer = styled.section`
     }
 
     @media (min-width: 800px) {
-      width: 820px;
+      width: 780px;
 
       & > h1 {
         font-size: 3.5rem;
@@ -37,9 +37,14 @@ const LayoutContainer = styled.section`
   }
 `;
 
-const Layout = ({ children, bg, centerX, centerY, title, id }) => {
+const Layout = ({ children, bg, centerX, centerY, title, id, fullHeight }) => {
   return (
-    <LayoutContainer bg={bg} centerX={centerX} centerY={centerY}>
+    <LayoutContainer
+      bg={bg}
+      centerX={centerX}
+      centerY={centerY}
+      fullHeight={fullHeight}
+    >
       <div id={id}>
         {title && <h1>{title}</h1>}
         {children}
