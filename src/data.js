@@ -1,25 +1,51 @@
-import politico from './assets/politico.png';
+import bravo from './assets/bravo.png';
 import esse from './assets/esse.png';
+import politico from './assets/politico.png';
 import luncher from './assets/luncher.png';
+import droom from './assets/droom.png';
 
 export default {
-  bio: `Hello, I'm a Full-Stack Engineer based in Nigeria. 
+  bio: `Hello, I'm a Full-Stack Web Developer based in Nigeria. 
     Loving every bit of what I do, creating solutions to real problems that
     can be solved using technology and also improving already existing solutions.`,
-  languages: ['HTML', 'CSS', 'JavaScript'],
-  frameworks: ['React', 'NodeJs'],
+  skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'GraphQL',
+    'Python',
+    'ReactJs',
+    'Node.js',
+    'Express',
+    'PostgreSQL',
+  ],
   projects: [
+    {
+      name: 'Bravo',
+      imag: bravo,
+      stacks:
+        'React, Redux, Node.js, ExpressJs, PostgreSQL, Knex, React-Testing-Library, Slack API.',
+      github: 'https://github.com/bravolabs',
+      link: 'https://saybravo.io',
+    },
+    {
+      name: 'Droom',
+      imag: droom,
+      stacks: 'Node/ExpressJs, PostgreSQL, Knex, Jest',
+      github: 'https://github.com/build-week-droom/Droom-BackEnd',
+      link: '',
+    },
     {
       name: 'Luncher',
       imag: luncher,
-      tech: ['React'],
+      stacks: 'React, Redux',
       github: 'https://github.com/luncher-lambda-buildweek/FrontEnd',
       link: 'https://luncher-donate-meals.netlify.com',
     },
     {
       name: 'Essentialism',
       imag: esse,
-      tech: ['Javascript'],
+      stacks: 'JavaScript',
       github:
         'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
       link: 'https://esse.netlify.com',
@@ -27,7 +53,7 @@ export default {
     {
       name: 'Politico',
       imag: politico,
-      tech: ['Javascript', 'NodeJs'],
+      stacks: 'JavaScript, Node.js',
       github: 'https://github.com/nobioma1/Politico',
       link: 'https://nobioma1.github.io/Politico',
     },

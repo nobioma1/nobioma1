@@ -1,37 +1,38 @@
-import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import { WiDaySunny, WiMoonAltWaxingCrescent4 } from 'react-icons/wi';
-import { HeaderContainer, Contact, Icon, SwitchContainer } from '../styles';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { MdReorder } from 'react-icons/md';
+import Nav from './Nav';
 
-const Header = props => {
+const HeaderContainer = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 3px solid #4e6ac6;
+  padding: 10px;
+  background-color: #081c35;
+  z-index: 999;
+
+  svg {
+    font-size: 3.5rem;
+    color: white;
+
+    @media (min-width: 500px) {
+      display: none;
+    }
+  }
+`;
+
+const Header = () => {
+  const [isOpen, openNav] = useState(false);
+  const navHandler = () => openNav(prevNavState => !prevNavState);
+
   return (
     <HeaderContainer>
-      <Contact>
-        <Icon>
-          <a href="https://twitter.com/nobleobioma_">
-            <FaTwitter />
-          </a>
-        </Icon>
-        <Icon>
-          <a href="https://linkedin.com/in/noble-obioma-2aa883140">
-            <FaLinkedin />
-          </a>
-        </Icon>
-        <Icon>
-          <a href="https://github.com/nobioma1">
-            <FaGithub />
-          </a>
-        </Icon>
-        <Icon>
-          <a href="mailto:nobioma1@gmail.com">
-            <FaEnvelope />
-          </a>
-        </Icon>
-      </Contact>
-      <SwitchContainer>
-        <WiDaySunny onClick={() => props.selectMode('light')} />
-        <WiMoonAltWaxingCrescent4 onClick={() => props.selectMode('dark')} />
-      </SwitchContainer>
+      <MdReorder onClick={navHandler} />
+      <Nav navState={isOpen} navHandler={navHandler} />
     </HeaderContainer>
   );
 };
