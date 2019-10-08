@@ -47,15 +47,6 @@ export default {
       link: 'https://luncher-donate-meals.netlify.com',
     },
     {
-      name: 'Essentialism',
-      imag: esse,
-      detail: '',
-      stacks: 'JavaScript',
-      github:
-        'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
-      link: '', // https://esse.netlify.com
-    },
-    {
       name: 'Politico',
       imag: politico,
       detail:
@@ -63,6 +54,15 @@ export default {
       stacks: 'JavaScript, Node.js',
       github: 'https://github.com/nobioma1/Politico',
       link: 'https://nobioma1.github.io/Politico',
+    },
+    {
+      name: 'Essentialism',
+      imag: esse,
+      detail: '',
+      stacks: 'JavaScript',
+      github:
+        'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
+      link: '', // https://esse.netlify.com
     },
   ],
 };
