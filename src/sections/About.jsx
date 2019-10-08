@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import Layout from '../components/Layout';
 import data from '../data';
@@ -100,21 +101,23 @@ const About = () => {
   return (
     <Layout bg="#FFFFFF" title="About" id="about">
       <AboutContainer>
-        <AboutInfo>
-          <div>
-            <img src={avatar} alt="Noble's Avatar" />
-          </div>
-          <p>{data.bio}</p>
-        </AboutInfo>
-        <h2>Skills</h2>
-        <Lang>
-          {data.skills.map((skill, index) => (
-            <div key={index}>
-              {icons(skill)}
-              <p>{skill}</p>
+        <ScrollAnimation animateIn="fadeIn" animateOnce>
+          <AboutInfo>
+            <div>
+              <img src={avatar} alt="Noble's Avatar" />
             </div>
-          ))}
-        </Lang>
+            <p>{data.bio}</p>
+          </AboutInfo>
+          <h2>Skills</h2>
+          <Lang>
+            {data.skills.map((skill, index) => (
+              <div key={index}>
+                {icons(skill)}
+                <p>{skill}</p>
+              </div>
+            ))}
+          </Lang>
+        </ScrollAnimation>
       </AboutContainer>
     </Layout>
   );

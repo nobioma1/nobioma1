@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const CardContainer = styled.div`
   background: #fff;
@@ -68,30 +69,32 @@ const Links = styled.div`
   }
 `;
 
-const Card = ({ title, img, alt, github, hostLink, stacks, detail }) => {
+const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
   return (
-    <CardContainer>
-      <ImgContainer>
-        <img src={img} alt={alt} />
-      </ImgContainer>
-      <Description>
-        <Header>
-          <h2>{title}</h2>
-          <Links>
-            <a href={github} target="__blank">
-              <FaGithub />
-            </a>
-            {hostLink && (
-              <a href={hostLink} target="__blank">
-                <MdOpenInNew />
+    <ScrollAnimation animateIn="fadeInLeft" animateOut="zoomOut" delay={delay}>
+      <CardContainer>
+        <ImgContainer>
+          <img src={img} alt={alt} />
+        </ImgContainer>
+        <Description>
+          <Header>
+            <h2>{title}</h2>
+            <Links>
+              <a href={github} target="__blank">
+                <FaGithub />
               </a>
-            )}
-          </Links>
-        </Header>
-        <p>{detail}</p>
-      </Description>
-      <p>Built With: {stacks}</p>
-    </CardContainer>
+              {hostLink && (
+                <a href={hostLink} target="__blank">
+                  <MdOpenInNew />
+                </a>
+              )}
+            </Links>
+          </Header>
+          <p>{detail}</p>
+        </Description>
+        <p>Built With: {stacks}</p>
+      </CardContainer>
+    </ScrollAnimation>
   );
 };
 

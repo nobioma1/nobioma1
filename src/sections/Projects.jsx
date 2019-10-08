@@ -22,6 +22,7 @@ const Projects = () => {
     <Layout bg="#F0F0F0" title="Projects" id="projects">
       <ProjectsContainer>
         {data.projects.map((project, index) => {
+          console.log(parseInt(`${index}000`, 10));
           return (
             <Card
               key={`${project.name}-${index}`}
@@ -32,6 +33,7 @@ const Projects = () => {
               hostLink={project.link}
               stacks={project.stacks}
               detail={project.detail}
+              delay={parseInt(`${index}00`, 10)}
             />
           );
         })}
