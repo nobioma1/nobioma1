@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MdArrowDownward } from 'react-icons/md';
+import { FaAngleDoubleDown } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 const LinkButton = styled(Link)`
@@ -35,10 +35,10 @@ export const HomeButton = ({ link }) => {
       to={link.toLowerCase()}
       spy={true}
       smooth={true}
-      offset={-100}
+      offset={-50}
       duration={500}
     >
-      View About Me <MdArrowDownward />
+      View About Me <FaAngleDoubleDown />
     </LinkButton>
   );
 };
