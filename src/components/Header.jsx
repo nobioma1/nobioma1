@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { MdReorder } from 'react-icons/md';
+import { FaBars } from 'react-icons/fa';
 import Nav from './Nav';
 
 const HeaderContainer = styled.div`
@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
   z-index: 999;
 
   svg {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     color: white;
 
     @media (min-width: 500px) {
@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <MdReorder onClick={navHandler} />
+      <FaBars onClick={navHandler} />
       <Nav navState={isOpen} navHandler={navHandler} />
     </HeaderContainer>
   );
