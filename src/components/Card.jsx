@@ -36,49 +36,59 @@ const ImgContainer = styled.div`
 const Description = styled.div`
   width: 100%;
   padding: 5px;
+
+  & > p {
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+  }
+`;
+
+const Header = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
-  & > h2 {
+  h2 {
     font-size: 2rem;
-    width: 85%;
     font-weight: 500;
   }
+`;
 
-  & > div {
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
+const Links = styled.div`
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
 
-    a {
-      svg {
-        font-size: 2rem;
-        color: #4e6ac6;
-        cursor: pointer;
-      }
+  a {
+    svg {
+      font-size: 2.3rem;
+      color: #4e6ac6;
+      cursor: pointer;
     }
   }
 `;
 
-const Card = ({ title, img, alt, github, hostLink, stacks }) => {
+const Card = ({ title, img, alt, github, hostLink, stacks, detail }) => {
   return (
     <CardContainer>
       <ImgContainer>
         <img src={img} alt={alt} />
       </ImgContainer>
       <Description>
-        <h2>{title}</h2>
-        <div>
-          <a href={github} target="__blank">
-            <FaGithub />
-          </a>
-          {hostLink && (
-            <a href={hostLink} target="__blank">
-              <MdOpenInNew />
+        <Header>
+          <h2>{title}</h2>
+          <Links>
+            <a href={github} target="__blank">
+              <FaGithub />
             </a>
-          )}
-        </div>
+            {hostLink && (
+              <a href={hostLink} target="__blank">
+                <MdOpenInNew />
+              </a>
+            )}
+          </Links>
+        </Header>
+        <p>{detail}</p>
       </Description>
       <p>Built With: {stacks}</p>
     </CardContainer>
