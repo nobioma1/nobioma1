@@ -1,5 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import Normalize from 'react-normalize';
 
 import Particles from './components/Particles';
 import Header from './components/Header';
@@ -33,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => {
   return (
     <React.Fragment>
+      <Normalize />
       <GlobalStyle />
       <Particles />
       <Header />
