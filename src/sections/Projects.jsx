@@ -31,6 +31,7 @@ const Projects = () => {
               github={project.github}
               hostLink={project.link}
               stacks={project.stacks}
+              detail={project.detail}
             />
           );
         })}
