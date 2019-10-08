@@ -23,6 +23,7 @@ export default {
     {
       name: 'Bravo',
       imag: bravo,
+      detail: 'Acknowledge the awesome work done by your co-workers.',
       stacks:
         'React, Redux, Node.js, ExpressJs, PostgreSQL, Knex, React-Testing-Library, Slack API.',
       github: 'https://github.com/bravolabs',
@@ -31,6 +32,7 @@ export default {
     {
       name: 'Droom',
       imag: droom,
+      detail: 'Find jobs by matching users with companies. Tinder for Jobs',
       stacks: 'Node/ExpressJs, PostgreSQL, Knex, Jest',
       github: 'https://github.com/build-week-droom/Droom-BackEnd',
       link: '',
@@ -38,6 +40,8 @@ export default {
     {
       name: 'Luncher',
       imag: luncher,
+      detail:
+        'Broadcast the needs of your students who can not aﬀord lunch by declaring some donations and allow individuals to make donations.',
       stacks: 'React, Redux',
       github: 'https://github.com/luncher-lambda-buildweek/FrontEnd',
       link: 'https://luncher-donate-meals.netlify.com',
@@ -45,14 +49,17 @@ export default {
     {
       name: 'Essentialism',
       imag: esse,
+      detail: '',
       stacks: 'JavaScript',
       github:
         'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
-      link: 'https://esse.netlify.com',
+      link: '', // https://esse.netlify.com
     },
     {
       name: 'Politico',
       imag: politico,
+      detail:
+        'Politico enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.',
       stacks: 'JavaScript, Node.js',
       github: 'https://github.com/nobioma1/Politico',
       link: 'https://nobioma1.github.io/Politico',
