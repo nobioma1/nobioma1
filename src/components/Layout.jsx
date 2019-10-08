@@ -5,12 +5,13 @@ const LayoutContainer = styled.section`
   min-height: ${props => (props.fullHeight ? '100vh' : 'auto')};
   width: 100%;
   display: flex;
-  padding: 50px 10px 10px 10px;
+  padding: 10px;
   justify-content: center;
   background-color: ${props => (props.bg ? props.bg : 'none')};
+  border: none;
 
   @media (min-width: 500px) {
-    padding: 50px 10px;
+    padding: 10px;
   }
 
   & > div {
