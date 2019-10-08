@@ -58,7 +58,7 @@ const NavItem = ({ link, fn }) => {
       onClick={fn}
       spy={true}
       smooth={true}
-      offset={-100}
+      offset={-50}
       duration={500}
     >
       {link}
