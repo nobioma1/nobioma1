@@ -5,9 +5,7 @@ import luncher from './assets/luncher.png';
 import droom from './assets/droom.png';
 
 export default {
-  bio: `Hello, I'm a Full-Stack Web Developer based in Nigeria. 
-    Loving every bit of what I do, creating solutions to real problems that
-    can be solved using technology and also improving already existing solutions.`,
+  bio: `Hello, I'm a Full-Stack Web Developer based in Nigeria. I love every bit of what I do, especially creating solutions to real problems that can be solved using technology and improving already existing solutions.`,
   skills: [
     'HTML',
     'CSS',
