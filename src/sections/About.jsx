@@ -20,7 +20,7 @@ const AboutContainer = styled.div`
   p {
     font-size: 2.2rem;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 `;
 

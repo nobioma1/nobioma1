@@ -31,7 +31,7 @@ const LayoutContainer = styled.section`
     }
 
     @media (min-width: 800px) {
-      width: 780px;
+      width: 800px;
 
       & > h1 {
         font-size: 3.8rem;

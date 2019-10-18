@@ -13,16 +13,17 @@ const CardContainer = styled.div`
   border-radius: 3px;
   padding-bottom: 5px;
   color: black;
+  line-height: 1.5;
 
   @media (min-width: 760px) {
     width: 380px;
-    min-height: 340px;
+    min-height: 320px;
     margin: 10px 0;
   }
 
   & > p {
     font-size: 1.6rem;
-    margin: 0 5px;
+    margin: 0 10px;
     opacity: 0.7;
   }
 `;
@@ -39,7 +40,7 @@ const ImgContainer = styled.div`
 
 const Description = styled.div`
   width: 100%;
-  padding: 5px;
+  padding: 10px;
 
   & > p {
     font-size: 1.8rem;
@@ -51,6 +52,7 @@ const Header = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 
   h2 {
     font-size: 2.2rem;
