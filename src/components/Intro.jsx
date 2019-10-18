@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Socials from './Socials';
 import { HomeButton } from './Button';
 
-const IntroContainer = styled.div`
+const IntroContainer = styled.header`
   color: white;
 
   & > h1 {
