@@ -12,14 +12,16 @@ const CardContainer = styled.div`
   margin: 5px 0;
   border-radius: 3px;
   padding-bottom: 5px;
+  color: black;
 
   @media (min-width: 760px) {
-    width: 360px;
+    width: 380px;
+    min-height: 340px;
     margin: 10px 0;
   }
 
   & > p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 0 5px;
     opacity: 0.7;
   }
@@ -30,6 +32,7 @@ const ImgContainer = styled.div`
 
   img {
     width: 100%;
+    height: 220px;
     border-radius: 3px 3px 0 0;
   }
 `;
@@ -39,7 +42,7 @@ const Description = styled.div`
   padding: 5px;
 
   & > p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     overflow-wrap: break-word;
   }
 `;
@@ -50,8 +53,8 @@ const Header = styled.div`
   justify-content: space-between;
 
   h2 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 700;
   }
 `;
 
