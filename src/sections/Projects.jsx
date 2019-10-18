@@ -19,10 +19,9 @@ const ProjectsContainer = styled.div`
 
 const Projects = () => {
   return (
-    <Layout bg="#F0F0F0" title="Projects" id="projects">
+    <Layout bg="#18171c" title="Projects" id="projects" centerY>
       <ProjectsContainer>
         {data.projects.map((project, index) => {
-          console.log(parseInt(`${index}000`, 10));
           return (
             <Card
               key={`${project.name}-${index}`}
