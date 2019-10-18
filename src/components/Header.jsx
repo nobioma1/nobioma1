@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 import Nav from './Nav';
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   position: fixed;
   display: flex;
   justify-content: flex-end;

@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
   }
 
   p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: justify;
     line-height: 1.5;
   }
@@ -99,7 +99,7 @@ const Lang = styled.div`
 
 const About = () => {
   return (
-    <Layout bg="#FFFFFF" title="About" id="about">
+    <Layout bg="#18171c" title="About" id="about" centerY>
       <AboutContainer>
         <ScrollAnimation animateIn="fadeIn" animateOnce>
           <AboutInfo>
