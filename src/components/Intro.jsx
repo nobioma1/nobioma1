@@ -41,7 +41,7 @@ const Hello = styled.p`
   border-top-left-radius: 10px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  box-shadow: 0px 0px 3px #b2b2b2;
+  box-shadow: 0px 0px 2px #b2b2b2;
 `;
 
 const Intro = () => {
