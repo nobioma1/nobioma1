@@ -8,6 +8,7 @@ const LayoutContainer = styled.section`
   padding: 10px;
   justify-content: center;
   background-color: ${props => (props.bg ? props.bg : 'none')};
+  color: ${props => (props.light ? '#000' : '#FFF')};
   border: none;
 
   @media (min-width: 500px) {
@@ -22,29 +23,40 @@ const LayoutContainer = styled.section`
     flex-direction: column;
 
     & > h1 {
-      font-size: 3rem;
-      margin-bottom: 5px;
-      border-bottom: 3px solid #000;
+      font-size: 3.8rem;
+      margin-bottom: 10px;
+      border-bottom: 3px solid ${props => (props.light ? '#000' : '#FFF')};
       padding: 5px;
+      text-align: center;
     }
 
     @media (min-width: 800px) {
       width: 780px;
 
       & > h1 {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
       }
     }
   }
 `;
 
-const Layout = ({ children, bg, centerX, centerY, title, id, fullHeight }) => {
+const Layout = ({
+  children,
+  bg,
+  centerX,
+  centerY,
+  title,
+  id,
+  fullHeight,
+  fontColor,
+}) => {
   return (
     <LayoutContainer
       bg={bg}
       centerX={centerX}
       centerY={centerY}
       fullHeight={fullHeight}
+      fontColor={fontColor}
     >
       <div id={id}>
         {title && <h1>{title}</h1>}
