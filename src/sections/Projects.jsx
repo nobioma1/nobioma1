@@ -9,8 +9,9 @@ const ProjectsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  @media (min-width: 760px) {
+  @media (min-width: 780px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
