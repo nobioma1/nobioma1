@@ -11,7 +11,7 @@ const CardContainer = styled.div`
   width: 100%;
   margin: 5px 0;
   border-radius: 3px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   color: black;
   line-height: 1.5;
 
@@ -53,6 +53,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  align-items: center;
 
   h2 {
     font-size: 2.2rem;
@@ -61,12 +62,18 @@ const Header = styled.div`
 `;
 
 const Links = styled.div`
-  width: 15%;
+  width: 60%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #4e6ac6;
+    margin-left: 10px;
+
     svg {
+      vertical-align: middle;
       font-size: 2.3rem;
       color: #4e6ac6;
       cursor: pointer;
@@ -86,11 +93,11 @@ const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
             <h2>{title}</h2>
             <Links>
               <a href={github} target="__blank">
-                <FaGithub />
+                Github <FaGithub />
               </a>
               {hostLink && (
                 <a href={hostLink} target="__blank">
-                  <MdOpenInNew />
+                  App <MdOpenInNew />
                 </a>
               )}
             </Links>
