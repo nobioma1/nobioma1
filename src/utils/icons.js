@@ -21,6 +21,10 @@ export default (name = '') => {
       return <SimpleIcons name="JavaScript" />;
     case 'postgresql':
       return <SimpleIcons name="PostgreSQL" />;
+    case 'django':
+      return <SimpleIcons name="Django" />;
+    case 'typescript':
+      return <SimpleIcons name="TypeScript" />;
     default:
       return;
   }

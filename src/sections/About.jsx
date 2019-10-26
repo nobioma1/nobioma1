@@ -90,10 +90,6 @@ const Lang = styled.div`
         height: 25px;
       }
     }
-
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 `;
 

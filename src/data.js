@@ -3,6 +3,7 @@ import esse from './assets/esse.png';
 import politico from './assets/politico.png';
 import luncher from './assets/luncher.png';
 import droom from './assets/droom.png';
+import mud from './assets/mud-game.png';
 
 export default {
   bio: `Hello, I'm a Full-Stack Web Developer based in Nigeria. I love every bit of what I do, especially creating solutions to real problems that can be solved using technology and improving already existing solutions.`,
@@ -11,13 +12,23 @@ export default {
     'CSS',
     'JavaScript',
     'GraphQL',
-    'Python',
     'ReactJs',
+    'TypeScript',
     'Node.js',
     'Express',
     'PostgreSQL',
+    'Django',
   ],
   projects: [
+    {
+      name: 'Multi-User Dungeon Game (MUD) ',
+      imag: mud,
+      detail:
+        'A Full-Stack multiplayer real-time virtual world web application. Players can transverse rooms (North, South, East, West), view descriptions of rooms, and chat with other players in the same room.',
+      stacks: 'React, Redux, Django, Pusher',
+      github: 'https://github.com/CSEU2-MUD',
+      link: 'https://mud-game.netlify.com',
+    },
     {
       name: 'Bravo',
       imag: bravo,

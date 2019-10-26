@@ -11,6 +11,15 @@ const ProjectsContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
   @media (min-width: 780px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,17 +33,19 @@ const Projects = () => {
       <ProjectsContainer>
         {data.projects.map((project, index) => {
           return (
-            <Card
-              key={`${project.name}-${index}`}
-              title={project.name}
-              img={project.imag}
-              alt={project.title}
-              github={project.github}
-              hostLink={project.link}
-              stacks={project.stacks}
-              detail={project.detail}
-              delay={parseInt(`${index}00`, 10)}
-            />
+            <a href={project.link} target="__blank">
+              <Card
+                key={`${project.name}-${index}`}
+                title={project.name}
+                img={project.imag}
+                alt={project.title}
+                github={project.github}
+                hostLink={project.link}
+                stacks={project.stacks}
+                detail={project.detail}
+                delay={parseInt(`${index}00`, 10)}
+              />
+            </a>
           );
         })}
       </ProjectsContainer>
