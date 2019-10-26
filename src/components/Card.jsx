@@ -83,7 +83,7 @@ const Links = styled.div`
 
 const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
   return (
-    <ScrollAnimation animateIn="fadeInLeft" animateOut="zoomOut" delay={delay}>
+    <ScrollAnimation animateIn="zoomIn" animateOut="zoomOut" delay={delay}>
       <CardContainer>
         <ImgContainer>
           <img src={img} alt={alt} />
@@ -104,7 +104,7 @@ const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
           </Header>
           <p>{detail}</p>
         </Description>
-        <p>Built With: {stacks}</p>
+        <p>&raquo; Built With: {stacks}</p>
       </CardContainer>
     </ScrollAnimation>
   );
