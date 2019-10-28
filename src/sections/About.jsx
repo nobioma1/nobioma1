@@ -100,7 +100,7 @@ const About = () => {
         <ScrollAnimation animateIn="fadeIn" animateOnce>
           <AboutInfo>
             <div>
-              <img src={avatar} alt="Noble's Avatar" />
+              <img src={avatar} alt="Noble Obioma" />
             </div>
             <p>{data.bio}</p>
           </AboutInfo>
