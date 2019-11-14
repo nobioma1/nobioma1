@@ -33,9 +33,13 @@ const Projects = () => {
       <ProjectsContainer>
         {data.projects.map((project, index) => {
           return (
-            <a href={project.link} target="__blank">
+            <a
+              key={`Link-${project.name}-${index}`}
+              href={project.link}
+              target="__blank"
+            >
               <Card
-                key={`${project.name}-${index}`}
+                key={`Card-${project.name}-${index}`}
                 title={project.name}
                 img={project.imag}
                 alt={project.title}
