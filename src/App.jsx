@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Normalize from 'react-normalize';
+import ReactGA from 'react-ga';
 
 import Particles from './components/Particles';
 import Header from './components/Header';
@@ -30,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
     background-color: #0A2342;
   }
 `;
+
+// Google Analytics
+ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {
   return (
