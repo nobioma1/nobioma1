@@ -25,6 +25,8 @@ export default (name = '') => {
       return <SimpleIcons name="Django" />;
     case 'typescript':
       return <SimpleIcons name="TypeScript" />;
+    case 'mongodb':
+      return <SimpleIcons name="MongoDB" />;
     default:
       return;
   }
