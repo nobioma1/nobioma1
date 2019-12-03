@@ -18,6 +18,7 @@ export default {
     'Express',
     'PostgreSQL',
     'Django',
+    'MongoDB'
   ],
   projects: [
     {
