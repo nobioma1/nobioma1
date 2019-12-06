@@ -83,7 +83,7 @@ const Links = styled.div`
 
 const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
   return (
-    <ScrollAnimation animateIn="zoomIn" animateOut="zoomOut" delay={delay}>
+    <ScrollAnimation animateIn="zoomIn" delay={delay} animateOnce>
       <CardContainer>
         <ImgContainer>
           <img src={img} alt={alt} />
