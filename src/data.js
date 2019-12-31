@@ -71,7 +71,7 @@ export default {
       // detail: '',
       // stacks: 'JavaScript',
       // github:
-        'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
+      //  'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
       // link: '', // https://esse.netlify.com
     // },
   ],
