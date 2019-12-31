@@ -1,5 +1,5 @@
 import bravo from './assets/bravo.png';
-import esse from './assets/esse.png';
+// import esse from './assets/esse.png';
 import politico from './assets/politico.png';
 import luncher from './assets/luncher.png';
 import droom from './assets/droom.png';
@@ -65,14 +65,14 @@ export default {
       github: 'https://github.com/nobioma1/Politico',
       link: 'https://nobioma1.github.io/Politico',
     },
-    {
-      name: 'Essentialism',
-      imag: esse,
-      detail: '',
-      stacks: 'JavaScript',
-      github:
+    // {
+      // name: 'Essentialism',
+      // imag: esse,
+      // detail: '',
+      // stacks: 'JavaScript',
+      // github:
         'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
-      link: '', // https://esse.netlify.com
-    },
+      // link: '', // https://esse.netlify.com
+    // },
   ],
 };
