@@ -1,9 +1,10 @@
-import bravo from './assets/bravo.png';
-// import esse from './assets/esse.png';
-import politico from './assets/politico.png';
-import luncher from './assets/luncher.png';
-import droom from './assets/droom.png';
-import mud from './assets/mud-game.png';
+import bravo from './assets/bravo.webp';
+// import esse from './assets/esse.webp';
+import politico from './assets/politico.webp';
+// import luncher from './assets/luncher.webp';
+import droom from './assets/droom.webp';
+import mud from './assets/mud-game.webp';
+import trackopp from './assets/trackopp.webp';
 
 export default {
   bio: `Hello, I'm a Full-Stack Web Developer based in Nigeria. I love every bit of what I do, especially creating solutions to real problems that can be solved using technology and improving already existing solutions.`,
@@ -14,13 +15,21 @@ export default {
     'GraphQL',
     'ReactJs',
     'TypeScript',
-    'Node.js',
     'Express',
     'PostgreSQL',
     'Django',
     'MongoDB',
   ],
   projects: [
+    {
+      name: 'TrackOpp',
+      imag: trackopp,
+      detail:
+        'Keep track of the progress on your job applications! Getting a job can be tough, tracking your applications should not.',
+      stacks: 'React, Redux, Firebase, ExpressJs, Redis, Puppeteer, Node-cron.',
+      github: 'https://github.com/nobioma1/track-opp',
+      link: 'https://trackopp.netlify.com/',
+    },
     {
       name: 'Multi-User Dungeon Game (MUD) ',
       imag: mud,
@@ -35,7 +44,7 @@ export default {
       imag: bravo,
       detail: 'Acknowledge the awesome work done by your co-workers.',
       stacks:
-        'React, Redux, Node.js, ExpressJs, PostgreSQL, Knex, React-Testing-Library, Slack API.',
+        'React, Redux,  ExpressJs, PostgreSQL, Knex, React-Testing-Library, Slack API.',
       github: 'https://github.com/bravolabs',
       link: 'https://saybravo.io',
     },
@@ -47,21 +56,21 @@ export default {
       github: 'https://github.com/build-week-droom/Droom-BackEnd',
       link: '',
     },
-    {
-      name: 'Luncher',
-      imag: luncher,
-      detail:
-        'Broadcast the needs of your students who can not aﬀord lunch by declaring some donations and allow individuals to make donations.',
-      stacks: 'React, Redux',
-      github: 'https://github.com/luncher-lambda-buildweek/FrontEnd',
-      link: 'https://luncher-donate-meals.netlify.com',
-    },
+    // {
+    //   name: 'Luncher',
+    //   imag: luncher,
+    //   detail:
+    //     'Broadcast the needs of your students who can not aﬀord lunch by declaring some donations and allow individuals to make donations.',
+    //   stacks: 'React, Redux',
+    //   github: 'https://github.com/luncher-lambda-buildweek/FrontEnd',
+    //   link: 'https://luncher-donate-meals.netlify.com',
+    // },
     {
       name: 'Politico',
       imag: politico,
       detail:
         'Politico enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.',
-      stacks: 'JavaScript, Node.js',
+      stacks: 'Vanilla JavaScript, ExpressJs',
       github: 'https://github.com/nobioma1/Politico',
       link: 'https://nobioma1.github.io/Politico',
     },
