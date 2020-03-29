@@ -18,7 +18,7 @@ export default {
     'Express',
     'PostgreSQL',
     'Django',
-    'MongoDB'
+    'MongoDB',
   ],
   projects: [
     {
@@ -66,13 +66,38 @@ export default {
       link: 'https://nobioma1.github.io/Politico',
     },
     // {
-      // name: 'Essentialism',
-      // imag: esse,
-      // detail: '',
-      // stacks: 'JavaScript',
-      // github:
-      //  'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
-      // link: '', // https://esse.netlify.com
+    // name: 'Essentialism',
+    // imag: esse,
+    // detail: '',
+    // stacks: 'JavaScript',
+    // github:
+    //  'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
+    // link: '', // https://esse.netlify.com
     // },
+  ],
+  articles: [
+    {
+      title: 'Build a CRUD Django REST API',
+      date: 'March 9, 2020',
+      link: 'https://dev.to/nobleobioma/build-a-crud-django-rest-api-46kc',
+      host: 'dev.to',
+      tags: '#django #python #tutorial',
+    },
+    {
+      title: 'Adding Authentication to a REST Framework Django API',
+      date: 'March 9, 2020',
+      link:
+        'https://dev.to/nobleobioma/adding-authentication-to-a-rest-framework-django-api-1e5a',
+      host: 'dev.to',
+      tags: '#django #python #tutorial',
+    },
+    {
+      title: 'Create a simple REST API with Django',
+      date: 'March 9, 2020',
+      link:
+        'https://dev.to/nobleobioma/create-a-simple-rest-api-with-django-253p',
+      host: 'dev.to',
+      tags: '#django #python #tutorial',
+    },
   ],
 };
