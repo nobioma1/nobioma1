@@ -4,7 +4,7 @@ import { MdOpenInNew } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const CardContainer = styled.div`
+const ProjectCardContainer = styled.div`
   background: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -81,10 +81,19 @@ const Links = styled.div`
   }
 `;
 
-const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
+const ProjectCard = ({
+  title,
+  img,
+  alt,
+  github,
+  hostLink,
+  stacks,
+  detail,
+  delay,
+}) => {
   return (
     <ScrollAnimation animateIn="zoomIn" delay={delay} animateOnce>
-      <CardContainer>
+      <ProjectCardContainer>
         <ImgContainer>
           <img src={img} alt={alt} />
         </ImgContainer>
@@ -105,9 +114,9 @@ const Card = ({ title, img, alt, github, hostLink, stacks, detail, delay }) => {
           <p>{detail}</p>
         </Description>
         <p>&raquo; Built With: {stacks}</p>
-      </CardContainer>
+      </ProjectCardContainer>
     </ScrollAnimation>
   );
 };
 
-export default Card;
+export default ProjectCard;
