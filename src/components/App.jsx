@@ -3,11 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 import Normalize from 'react-normalize';
 import ReactGA from 'react-ga';
 
-import Particles from './components/Particles';
-import Header from './components/Header';
-import Home from './sections/Home';
-import About from './sections/About';
-import Projects from './sections/Projects';
+import Particles from './Particles';
+import Header from './Header';
+import Home from '../sections/Home';
+import About from '../sections/About';
+import Projects from '../sections/Projects';
+import Articles from '../sections/Articles';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -32,13 +33,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// Google Analytics
-ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 const App = () => {
+  // Google Analytics
+  ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
-    <React.Fragment>
+    <main>
       <Normalize />
       <GlobalStyle />
       <Particles />
@@ -46,7 +47,8 @@ const App = () => {
       <Home />
       <About />
       <Projects />
-    </React.Fragment>
+      <Articles />
+    </main>
   );
 };
 
