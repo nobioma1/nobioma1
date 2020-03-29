@@ -4,7 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import Layout from '../components/Layout';
 import data from '../data';
-import avatar from '../assets/noble.jpg';
+import avatar from '../assets/noble.webp';
 import icons from '../utils/icons';
 
 const AboutContainer = styled.div`

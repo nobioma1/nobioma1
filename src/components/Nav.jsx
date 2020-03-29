@@ -6,7 +6,7 @@ const NavContainer = styled.nav`
   position: absolute;
   display: block;
   width: 100%;
-  height: ${props => (props.isOpen ? '130px' : '0px')};
+  height: ${props => (props.isOpen ? '150px' : '0px')};
   background-color: #081c35;
   transition: all 0.5s ease-in-out;
   overflow-y: hidden;
@@ -67,7 +67,7 @@ const NavItem = ({ link, fn }) => {
 };
 
 const Nav = ({ navState, navHandler }) => {
-  const navItems = ['Home', 'About', 'Projects'];
+  const navItems = ['Home', 'About', 'Projects', 'Articles'];
   return (
     <NavContainer isOpen={navState}>
       {navItems.map((item, index) => (
