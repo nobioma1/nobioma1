@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
-import Card from '../components/Card';
+import ProjectCard from '../components/Cards/ProjectCard';
 import data from '../data';
 
 const ProjectsContainer = styled.div`
@@ -38,11 +38,10 @@ const Projects = () => {
               href={project.link}
               target="__blank"
             >
-              <Card
-                key={`Card-${project.name}-${index}`}
+              <ProjectCard
                 title={project.name}
                 img={project.imag}
-                alt={project.title}
+                alt={project.name}
                 github={project.github}
                 hostLink={project.link}
                 stacks={project.stacks}
