@@ -25,7 +25,7 @@ const ArticlesContainer = styled.div`
 
 const Articles = () => {
   return (
-    <Layout bg="#18171c" title="Articles" id="Articles" centerY>
+    <Layout bg="#18171c" title="Articles" id="articles" centerY>
       <ArticlesContainer>
         {data.articles.map((article, index) => {
           return (
