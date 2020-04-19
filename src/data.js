@@ -28,7 +28,7 @@ export default {
         'Keep track of the progress on your job applications! Getting a job can be tough, tracking your applications should not.',
       stacks: 'React, Redux, Firebase, ExpressJs, Redis, Puppeteer, Node-cron.',
       github: 'https://github.com/nobioma1/track-opp',
-      link: 'https://trackopp.netlify.com/',
+      link: 'https://trackopp.netlify.app/',
     },
     {
       name: 'Multi-User Dungeon Game (MUD) ',
@@ -37,7 +37,7 @@ export default {
         'A Full-Stack multiplayer real-time virtual world web application. Players can transverse rooms (North, South, East, West), view descriptions of rooms, and chat with other players in the same room.',
       stacks: 'React, Redux, Django, Pusher',
       github: 'https://github.com/CSEU2-MUD',
-      link: 'https://mud-game.netlify.com',
+      link: 'https://mud-game.netlify.app',
     },
     {
       name: 'Bravo',
@@ -63,7 +63,7 @@ export default {
     //     'Broadcast the needs of your students who can not aﬀord lunch by declaring some donations and allow individuals to make donations.',
     //   stacks: 'React, Redux',
     //   github: 'https://github.com/luncher-lambda-buildweek/FrontEnd',
-    //   link: 'https://luncher-donate-meals.netlify.com',
+    //   link: 'https://luncher-donate-meals.netlify.app',
     // },
     {
       name: 'Politico',
@@ -81,7 +81,7 @@ export default {
     // stacks: 'JavaScript',
     // github:
     //  'https://github.com/lambda-essentialism/build-essentialism-WebUI-Noble',
-    // link: '', // https://esse.netlify.com
+    // link: '', // https://esse.netlify.app
     // },
   ],
   articles: [
