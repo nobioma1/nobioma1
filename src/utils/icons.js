@@ -18,7 +18,7 @@ export default (name = '') => {
     case 'graphql':
       return <SimpleIcons name="GraphQL" />;
     case 'express':
-      return <SimpleIcons name="JavaScript" />;
+      return <SimpleIcons name="Node.js" />;
     case 'postgresql':
       return <SimpleIcons name="PostgreSQL" />;
     case 'django':
@@ -27,6 +27,10 @@ export default (name = '') => {
       return <SimpleIcons name="TypeScript" />;
     case 'mongodb':
       return <SimpleIcons name="MongoDB" />;
+    case 'kubernetes':
+      return <SimpleIcons name="Kubernetes" />;
+    case 'docker':
+      return <SimpleIcons name="Docker" />;
     default:
       return;
   }

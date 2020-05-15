@@ -19,6 +19,8 @@ export default {
     'PostgreSQL',
     'Django',
     'MongoDB',
+    'Docker',
+    'Kubernetes',
   ],
   projects: [
     {
