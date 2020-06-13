@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import ArticleCard from '../components/Cards/ArticleCard';
-import data from '../data';
+import useRequest from '../hooks/useRequest';
 
 const ArticlesContainer = styled.div`
   width: 100%;
@@ -21,23 +21,58 @@ const ArticlesContainer = styled.div`
       transform: scale(1.02);
     }
   }
+
+  div {
+    a {
+      color: white
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 16px;
+
+      &:hover {
+        color: dodgerblue
+      }
+    }
+  }
 `;
 
 const Articles = () => {
+  const [articles, setArticles] = useState([]);
+  const { doRequest, error } = useRequest({
+    url: 'https://dev.to/api/articles?username=nobleobioma',
+    method: 'get',
+  });
+
+  useEffect(() => {
+    doRequest({
+      onSuccess: (res) => setArticles(res),
+    });
+  }, []);
+
+  const articlesList = articles.slice(0, 5).map((article, index) => {
+    return (
+      <a
+        key={`Link-${article.name}-${index}`}
+        href={article.url}
+        target="__blank"
+      >
+        <ArticleCard article={article} delay={parseInt(`${index}00`, 10)} />
+      </a>
+    );
+  });
+
   return (
     <Layout bg="#18171c" title="Articles" id="articles" centerY>
       <ArticlesContainer>
-        {data.articles.map((article, index) => {
-          return (
-            <a
-              key={`Link-${article.name}-${index}`}
-              href={article.link}
-              target="__blank"
-            >
-              <ArticleCard {...article} delay={parseInt(`${index}00`, 10)} />
+        {error}
+        {articlesList}
+        {(articles.length > 5 || error) && (
+          <div>
+            <a href="https://dev.to/nobleobioma">
+              Click for more articles on DEV.to
             </a>
-          );
-        })}
+          </div>
+        )}
       </ArticlesContainer>
     </Layout>
   );
