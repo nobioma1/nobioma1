@@ -38,7 +38,7 @@ const ArticlesContainer = styled.div`
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const { doRequest } = useRequest({
+  const { doRequest, error } = useRequest({
     url: 'https://dev.to/api/articles?username=nobleobioma',
     method: 'get',
   });
@@ -64,11 +64,12 @@ const Articles = () => {
   return (
     <Layout bg="#18171c" title="Articles" id="articles" centerY>
       <ArticlesContainer>
+        {error}
         {articlesList}
-        {articles.length > 5 && (
+        {(articles.length > 5 || error) && (
           <div>
             <a href="https://dev.to/nobleobioma">
-              Visit Dev.to for more articles
+              Click for more articles on DEV.to
             </a>
           </div>
         )}
