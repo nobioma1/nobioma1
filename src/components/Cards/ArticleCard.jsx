@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FaDev } from 'react-icons/fa';
+import moment from 'moment';
 
 const ArticleCardContainer = styled.div`
   background: #202c3d;
@@ -53,7 +54,8 @@ const Footer = styled.div`
   }
 `;
 
-const ArticleCard = ({ title, tags, date, delay }) => {
+const ArticleCard = ({ article, delay }) => {
+  const { title, published_at, tags } = article;
   return (
     <ScrollAnimation animateIn="zoomIn" delay={delay} animateOnce>
       <ArticleCardContainer>
@@ -61,7 +63,7 @@ const ArticleCard = ({ title, tags, date, delay }) => {
           <h2>{title}</h2>
         </Header>
         <Footer>
-          <p>Published: {date}</p>
+          <p>Published: {moment(published_at).format('DD MMM, YYYY')}</p>
           <p>{tags}</p>
           <FaDev />
         </Footer>
