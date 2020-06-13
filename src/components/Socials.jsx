@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import {
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaDev,
+} from 'react-icons/fa';
 
 const Contact = styled.div`
   width: 85%;
@@ -63,6 +69,11 @@ const Socials = () => {
       <Icon>
         <a href="mailto:nobioma1@gmail.com">
           <FaEnvelope />
+        </a>
+      </Icon>
+      <Icon>
+        <a href="https://dev.to/nobleobioma">
+          <FaDev />
         </a>
       </Icon>
     </Contact>
