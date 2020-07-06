@@ -47,6 +47,7 @@ const Articles = () => {
     doRequest({
       onSuccess: (res) => setArticles(res),
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const articlesList = articles.slice(0, 5).map((article, index) => {
