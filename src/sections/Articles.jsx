@@ -24,13 +24,13 @@ const ArticlesContainer = styled.div`
 
   div {
     a {
-      color: white
+      color: white;
       text-decoration: none;
       margin: 10px 0;
       font-size: 16px;
 
       &:hover {
-        color: dodgerblue
+        color: dodgerblue;
       }
     }
   }
