@@ -41,6 +41,7 @@ const Socials = () => {
     <Contact>
       <Icon>
         <a
+          name="github-nobioma1"
           href="https://github.com/nobioma1"
           target="_blank"
           rel="noopener noreferrer"
@@ -50,6 +51,7 @@ const Socials = () => {
       </Icon>
       <Icon>
         <a
+          name="twitter-nobleobioma_"
           href="https://twitter.com/nobleobioma_"
           target="_blank"
           rel="noopener noreferrer"
@@ -59,6 +61,7 @@ const Socials = () => {
       </Icon>
       <Icon>
         <a
+          name="linkedin-nobleobioma"
           href="https://linkedin.com/in/nobleobioma"
           target="_blank"
           rel="noopener noreferrer"
@@ -67,12 +70,12 @@ const Socials = () => {
         </a>
       </Icon>
       <Icon>
-        <a href="mailto:nobioma1@gmail.com">
+        <a name="gmail-nobioma1" href="mailto:nobioma1@gmail.com">
           <FaEnvelope />
         </a>
       </Icon>
       <Icon>
-        <a href="https://dev.to/nobleobioma">
+        <a name="dev-nobleobioma" href="https://dev.to/nobleobioma">
           <FaDev />
         </a>
       </Icon>
