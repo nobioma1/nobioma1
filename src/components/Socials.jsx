@@ -51,8 +51,8 @@ const Socials = () => {
       </Icon>
       <Icon>
         <a
-          name="twitter-nobleobioma_"
-          href="https://twitter.com/nobleobioma_"
+          name="twitter-nobool_"
+          href="https://twitter.com/nobool_"
           target="_blank"
           rel="noopener noreferrer"
         >
