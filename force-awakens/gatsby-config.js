@@ -4,6 +4,7 @@ module.exports = {
       resolve: `gatsby-alias-imports`,
       options: {
         aliases: {
+          "@api": "src/api",
           "@components": "src/components",
           "@layouts": "src/components/layouts",
           "@sections": "src/components/sections",
@@ -19,8 +20,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
   ],
 };
