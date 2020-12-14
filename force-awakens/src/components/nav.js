@@ -17,7 +17,8 @@ const NavItems = styled.div`
   height: ${({ isOpen }) => (isOpen ? "11.5rem" : 0)};
   padding: ${({ theme, isOpen }) => (isOpen ? theme.spacing.md : 0)};
   background-color: ${({ theme }) => theme.colors.spaceCadet};
-  border-bottom: ${({ isOpen }) => (isOpen ? "0.5px solid white" : "none")};
+  border-bottom: ${({ isOpen, theme }) =>
+    isOpen ? `0.5px solid ${theme.colors.maxBlueGreen}` : "none"};
 
   @media only screen and (min-width: 720px) {
     flex-direction: row;
