@@ -5,6 +5,14 @@ import Img from "gatsby-image";
 import { StyledSubTitle } from "@styled/title";
 
 const StyledProject = styled.div`
+  & > .img {
+    margin-bottom: 0.8rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   @media only screen and (min-width: 720px) {
     display: flex;
 
@@ -22,15 +30,22 @@ const StyledProject = styled.div`
     `};
 
     & > .desc {
-      flex: 1;
       display: flex;
+      flex: 1;
       flex-direction: column;
+      ${({ card }) =>
+        card
+          ? `
+          padding: unset;
+          `
+          : `
+      padding: 0 3rem;
       justify-content: center;
-      padding: ${({ card }) => (!card ? "0 3rem;" : "unset")};
+      `};
     }
 
     & > .img {
-      flex: 1;
+      flex: ${({ card }) => (card ? "initial" : 1)};
       width: ${({ card }) => (card ? "100%" : "initial")};
       margin: 2rem 0;
     }

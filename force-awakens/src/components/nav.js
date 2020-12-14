@@ -65,6 +65,10 @@ const NavItems = styled.div`
     &:hover {
       border: ${({ theme }) => `1px solid ${theme.colors.maxBlueGreen}`};
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .hover {

@@ -23,7 +23,7 @@ const SkillsSection = styled.div`
   margin-top: 8px;
 
   & > p {
-    margin: 0.8rem 0;
+    margin: 0.6rem 0;
   }
 
   @media only screen and (min-width: 720px) {

@@ -16,4 +16,8 @@ export const GlobalStyle = createGlobalStyle`
   ol, ul {
     list-style: none;
   }
+
+  p {
+    line-height: 1.6rem;
+  }
 `;
