@@ -13,8 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  but
-
   ol, ul {
     list-style: none;
   }
