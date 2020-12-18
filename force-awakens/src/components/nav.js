@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { Link } from "gatsby";
 
 import themeObj from "../theme";
 import ScrollLink from "@shared/scrollLink";
@@ -14,7 +15,7 @@ const NavItems = styled.div`
   overflow-y: hidden;
   top: 3.75rem;
   left: 0;
-  height: ${({ isOpen }) => (isOpen ? "11.5rem" : 0)};
+  height: ${({ isOpen }) => (isOpen ? "12rem" : 0)};
   padding: ${({ theme, isOpen }) => (isOpen ? theme.spacing.md : 0)};
   background-color: ${({ theme }) => theme.colors.spaceCadet};
   border-bottom: ${({ isOpen, theme }) =>
@@ -51,15 +52,17 @@ const NavItems = styled.div`
     }
   }
 
-  button {
+  .button {
     font-size: 1em;
+    text-decoration: none;
     border-radius: 5px;
     background-color: transparent;
     color: white;
+    text-align: center;
     cursor: pointer;
     transition: 0.5s;
     margin: ${({ theme }) => theme.spacing.sm} 0;
-    padding: ${({ theme }) => theme.spacing.sm};
+    padding: ${({ theme }) => theme.spacing.sm} 1.5rem;
     border: ${({ theme }) => `1px solid ${theme.colors.sunshine}`};
 
     &:hover {
@@ -90,6 +93,7 @@ const Nav = () => {
     <>
       <HiOutlineMenuAlt3
         size="1.8rem"
+        cursor="pointer"
         color={themeObj.colors.sunshine}
         onClick={() => setOpen(!isOpen)}
       />
@@ -104,7 +108,9 @@ const Nav = () => {
             {title}
           </ScrollLink>
         ))}
-        <button>Resume</button>
+        <Link to="/blog" className="button">
+          Blog
+        </Link>
       </NavItems>
     </>
   );

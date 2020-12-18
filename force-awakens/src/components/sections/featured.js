@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import SectionTitle from "@shared/sectionTitle";
 import MaxWidthLayout from "@layouts/maxWidth";
 import Project from "@shared/project";
+import data from "../../data";
 
 const FeaturedContainer = styled.div`
   padding: ${({ theme }) =>
@@ -12,9 +13,10 @@ const FeaturedContainer = styled.div`
 `;
 
 const Featured = () => {
+  const { name, detail, image, ...props } = data.projects[0];
   const query = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "trackopp.png" }) {
+      jobhuntpad: file(relativePath: { eq: "trackopp.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -33,12 +35,11 @@ const Featured = () => {
       />
       <FeaturedContainer>
         <Project
-          title="JobHuntPad"
-          description="Keep track of the progress on your job applications! Getting a job
-          can be tough, tracking your applications should not."
-          stack="React, Redux, Firebase, ExpressJs, Redis, Puppeteer, Node-cron."
+          title={name}
+          description={detail}
+          imageSrc={query[image].childImageSharp.fluid}
+          {...props}
           fluid
-          imageSrc={query.file.childImageSharp.fluid}
           noReverse
         />
       </FeaturedContainer>

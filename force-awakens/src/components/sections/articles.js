@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import devApi from "@api/dev";
 import Loading from "@shared/loading";
@@ -13,7 +14,7 @@ const ArticlesContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  a {
+  & > .card {
     width: 100%;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -23,12 +24,24 @@ const ArticlesContainer = styled.div`
     }
   }
 
+  .link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.08em;
+    transition: 0.5s;
+
+    &:hover {
+      color: dodgerblue;
+    }
+  }
+
   div {
     a {
       color: white;
       text-decoration: none;
       margin: 10px 0;
-      font-size: 16px;
+      font-size: 1em;
 
       &:hover {
         color: dodgerblue;
@@ -64,6 +77,7 @@ const Articles = () => {
         key={`Link-${article.name}-${index}`}
         href={article.url}
         target="__blank"
+        className="card"
       >
         <ArticleCard article={article} delay={parseInt(`${index}00`, 10)} />
       </a>
@@ -77,13 +91,12 @@ const Articles = () => {
         <ArticlesContainer>
           {error}
           {articlesList}
-          {(articles.length > 5 || error) && (
-            <div>
-              <a href="https://dev.to/nobleobioma">
-                Click to see {error ? "articles" : "more"} &rarr;
-              </a>
-            </div>
-          )}
+          <Link to="/blog" className="link">
+            {error
+              ? "Go to Blog page"
+              : "Click to see more articles on my Blog"}
+            &rarr;
+          </Link>
           {isLoading && <Loading />}
         </ArticlesContainer>
       </section>

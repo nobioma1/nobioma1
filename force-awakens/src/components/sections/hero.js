@@ -113,7 +113,7 @@ const Avatar = styled(Img)`
   }
 `;
 
-const Hero = () => {
+const Hero = ({ openContact }) => {
   const textRef = useRef();
   const query = useStaticQuery(graphql`
     {
@@ -169,7 +169,7 @@ const Hero = () => {
             <div className="typed-container">
               <span className="typed" ref={textRef} />
             </div>
-            <GetInTouchBtn />
+            <GetInTouchBtn onClickHandler={openContact} />
             <Avatar
               loading="eager"
               fluid={query.file.childImageSharp.fluid}

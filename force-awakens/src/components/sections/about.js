@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 
 import SectionTitle from "@shared/sectionTitle";
 import { StyledSection } from "@styled/sections";
+import data from "../../data";
 
 const AboutContainer = styled(StyledSection)`
   position: relative;
@@ -15,7 +16,11 @@ const AboutContainer = styled(StyledSection)`
     height: 30%;
     width: 30%;
     right: 10%;
-    bottom: 30%;
+    bottom: 15%;
+
+    @media (min-width: 425px) {
+      bottom: 30%;
+    }
   }
 `;
 
@@ -45,29 +50,15 @@ const About = () => {
     }
   `);
 
-  const skills = [
-    "HTML",
-    "CSS",
-    "React",
-    "NodeJs",
-    "PostgreSQL",
-    "MongoDB",
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "Express",
-    "Amazon Web Services(AWS)",
-  ];
-
   return (
     <AboutContainer id="about">
       <SectionTitle title="About Me" color="#FFF" />
       <section>
         <p>
-          Hello again! I'm Noble Obioma, a Full-Stack Engineer based in Nigeria.
-          I love every bit of what I do, especially creating solutions to real
-          problems that can be solved using technology and improving already
-          existing solutions. Well, the bugs do not bug me.{" "}
+          I'm Noble Obioma, a Full-Stack Engineer based in Nigeria. I love every
+          bit of what I do, especially creating solutions to real problems that
+          can be solved using technology and improving already existing
+          solutions. Well, the bugs do not bug me.{" "}
           <span role="img" aria-label="smile">
             😁
           </span>
@@ -76,7 +67,7 @@ const About = () => {
         <div>
           <p>Here’s a few technologies I have been working with:</p>
           <SkillsSection>
-            {skills.map(skill => (
+            {data.stack.map(skill => (
               <p key={skill}>
                 <span> &gt;&#x5f;</span> {skill}
               </p>
