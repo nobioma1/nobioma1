@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BiMailSend } from "react-icons/bi";
-import { useLocation } from "@reach/router";
-import * as qs from "query-string";
 import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha";
 
 import { Button } from "./styled/button";
 
@@ -41,45 +38,45 @@ const FormContainer = styled.div`
   }
 `;
 
-const ContactForm = ({ closeForm }) => {
+const ContactForm = ({ closeForm, onSuccess }) => {
   const [formData, setFormData] = useState({
-    "form-name": "Contact Form",
     name: "",
     email: "",
     message: "",
   });
-  const [feedback, setFeedback] = useState("");
-  const location = useLocation();
+  const [error, setError] = useState(null);
 
   const handleChange = e => {
     const target = e.target;
     setFormData(prev => ({ ...prev, [target.name]: target.value }));
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
 
-    console.log(formData);
+  const handleSubmit = event => {
+    event.preventDefault();
 
-    const axiosOptions = {
-      url: location.pathname,
-      method: "post",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      data: qs.stringify(formData),
-    };
-
-    axios(axiosOptions)
+    axios
+      .post("/", {
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": event.target.getAttribute("name"),
+          ...formData,
+        }),
+      })
       .then(response => {
-        setFeedback("Form submitted successfully!");
-
-        setFormData(prev => ({
-          ...prev,
+        onSuccess();
+        setFormData({
           name: "",
           email: "",
           message: "",
-        }));
+        });
       })
-      .catch(err => setFeedback("Form could not be submitted."));
+      .catch(err => setError());
   };
 
   return (
@@ -91,47 +88,44 @@ const ContactForm = ({ closeForm }) => {
         </span>
       </p>
       <form
-        method="POST"
+        name="Contact Form"
+        method="post"
         data-netlify="true"
-        data-netlify-recaptcha="true"
-        name="NobleObioma Contact Form"
-        onSubmit={e => handleSubmit(e)}
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="Contact Form" />
         <div>
           <label htmlFor="name">Name</label>
           <input
-            onChange={handleChange}
-            value={formData.name}
             type="name"
             id="name"
             name="name"
             placeholder="Hal Jordan"
+            value={formData.name}
+            onChange={handleChange}
           />
         </div>
         <div>
           <label htmlFor="email">What is your email?</label>
           <input
-            onChange={handleChange}
-            value={formData.email}
-            type="email"
             id="email"
             name="email"
             placeholder="hello@email.com"
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
         <div>
           <label htmlFor="email">Message</label>
           <textarea
-            onChange={handleChange}
-            value={formData.message}
             id="message"
             name="message"
             placeholder="..."
+            value={formData.message}
+            onChange={handleChange}
           />
         </div>
-        <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_SITE_KEY} />
-        {feedback && <p>{feedback}</p>}
         <div className="btn-container">
           <Button type="submit">
             <BiMailSend />
