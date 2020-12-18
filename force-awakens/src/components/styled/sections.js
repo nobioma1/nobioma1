@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSectionsWrapper = styled.div`
-  padding-top: ${({ theme }) => theme.spacing.xl};
+  padding-top: 3.75rem;
 `;
 
 export const StyledSection = styled.div`
