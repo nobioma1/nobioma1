@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Noble Obioma`,
-    description: `A full-stack software engineer building high quality, scalable solutions for the web across a wide range of industries. My ultimate passion is building software and tackling new problems.`,
+    description: `Hi, I'm Noble. I'm a full-stack software engineer, a lover of music, soon a bassist. My ultimate passion is building software and tackling new problems.`,
     author: `@nobooln`,
   },
   plugins: [
