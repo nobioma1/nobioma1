@@ -88,13 +88,13 @@ const ContactForm = ({ closeForm, onSuccess }) => {
         </span>
       </p>
       <form
-        name="Contact Form"
-        method="post"
+        name="Contact"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input type="hidden" name="form-name" value="Contact" />
         <div>
           <label htmlFor="name">Name</label>
           <input
