@@ -5,20 +5,25 @@ import axios from "axios";
 
 import { Button } from "./styled/button";
 
-const FormContainer = styled.div`
-  form > div {
+const FormContainer = styled.form`
+  width: 100%;
+
+  div {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
 
     input {
-      height: 2.3rem;
-      padding: 0 0.3rem;
+      font-size: 1em;
+      height: 2.8rem;
+      padding: 0 0.6rem;
     }
 
     textarea {
+      font-size: 1em;
       min-height: 5rem;
-      padding: 0.3rem;
+      padding: 0.6rem;
+      max-width: 548px;
     }
 
     input,
@@ -35,6 +40,16 @@ const FormContainer = styled.div`
 
   .btn-container {
     display: flex;
+    flex-direction: column;
+
+    @media (min-width: 425px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      button {
+        width: 45%;
+      }
+    }
   }
 `;
 
@@ -80,60 +95,53 @@ const ContactForm = ({ closeForm, onSuccess }) => {
   };
 
   return (
-    <FormContainer>
-      <p>
-        Hey, I'm really excited to connect with you.
-        <span role="img" aria-label="dance">
-          🕺🏻
-        </span>
-      </p>
-      <form
-        name="Contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="form-name" value="Contact" />
-        <div>
-          <label htmlFor="name">Name</label>
-          <input
-            type="name"
-            id="name"
-            name="name"
-            placeholder="Hal Jordan"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">What is your email?</label>
-          <input
-            id="email"
-            name="email"
-            placeholder="hello@email.com"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="..."
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="btn-container">
-          <Button type="submit">
-            <BiMailSend />
-            Send
-          </Button>
-          <Button onClick={closeForm}>Maybe another time</Button>
-        </div>
-      </form>
+    <FormContainer
+      name="Contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+    >
+      <input type="hidden" name="form-name" value="Contact" />
+      <div>
+        <label htmlFor="name">Name</label>
+        <input
+          type="name"
+          id="name"
+          name="name"
+          placeholder="Hal Jordan"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">What is your email?</label>
+        <input
+          id="email"
+          name="email"
+          placeholder="hello@email.com"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Message</label>
+        <textarea
+          rows={8}
+          id="message"
+          name="message"
+          placeholder="..."
+          value={formData.message}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="btn-container">
+        <Button type="submit">
+          <BiMailSend />
+          Send
+        </Button>
+        <Button onClick={closeForm}>Maybe another time</Button>
+      </div>
     </FormContainer>
   );
 };

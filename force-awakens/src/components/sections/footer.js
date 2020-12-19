@@ -38,7 +38,15 @@ const Footer = ({ isContactOpen, setContactOpen }) => {
       <FooterContainer>
         <ContactContainer>
           {isContactOpen ? (
-            <ContactForm closeForm={() => setContactOpen(false)} />
+            <>
+              <p>
+                Hey, I'm really excited to connect with you.
+                <span role="img" aria-label="dance">
+                  🕺🏻
+                </span>
+              </p>
+              <ContactForm closeForm={() => setContactOpen(false)} />
+            </>
           ) : (
             <>
               <p>
