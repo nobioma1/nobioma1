@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Main>
       <SEO
-        title="Ndeewo!"
+        title="Hi, I'm Noble"
         keywords={[`Noble Obioma`, `Software Engineer`, `Full-Stack Engineer`]}
       />
       <Header />
