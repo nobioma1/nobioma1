@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
-  p {
+  p, label {
     line-height: 1.6rem;
     letter-spacing: 0.05em;
   }
