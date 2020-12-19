@@ -25,6 +25,20 @@ const ContactContainer = styled.div`
   margin: 0 auto;
   padding: 0 1rem 4rem 1rem;
 
+  section {
+    width: 100%;
+  }
+
+  #contact-intro {
+    display: ${({ contactForm }) => (contactForm ? "none" : "flex")};
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-form {
+    display: ${({ contactForm }) => (contactForm ? "block" : "none")};
+  }
+
   p {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -36,27 +50,24 @@ const Footer = ({ isContactOpen, setContactOpen }) => {
     <div id="contact">
       <SectionTitle title="Let's Connect" color="#FFF" />
       <FooterContainer>
-        <ContactContainer>
-          {isContactOpen ? (
-            <>
-              <p>
-                Hey, I'm really excited to connect with you.
-                <span role="img" aria-label="dance">
-                  🕺🏻
-                </span>
-              </p>
-              <ContactForm closeForm={() => setContactOpen(false)} />
-            </>
-          ) : (
-            <>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. dummy text ever since the 1500s. May the force be with
-                you.
-              </p>
-              <GetInTouchBtn onClickHandler={() => setContactOpen(true)} />
-            </>
-          )}
+        <ContactContainer contactForm={isContactOpen}>
+          <section id="contact-intro">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. dummy text ever since the 1500s. May the force be with
+              you.
+            </p>
+            <GetInTouchBtn onClickHandler={() => setContactOpen(true)} />
+          </section>
+          <section id="contact-form">
+            <p>
+              Hey, I'm really excited to connect with you.
+              <span role="img" aria-label="dance">
+                🕺🏻
+              </span>
+            </p>
+            <ContactForm closeForm={() => setContactOpen(false)} />
+          </section>
         </ContactContainer>
         <p>
           2019 - {new Date().getFullYear()} || Designed and built with{" "}
