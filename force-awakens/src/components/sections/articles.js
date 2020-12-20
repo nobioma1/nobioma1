@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import devApi from "@api/dev";
 import Loading from "@shared/loading";
 import ArticleCard from "@components/articleCard";
 import SectionTitle from "@shared/sectionTitle";
@@ -57,10 +56,11 @@ const Articles = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      setIsLoading(true);
       try {
-        const { data } = await devApi.get("/articles?username=nobleobioma");
-        setArticles(data);
+        const data = await fetch(
+          "https://dev.to/api/articles?username=nobleobioma"
+        );
+        setArticles(await data.json());
         setIsLoading(false);
       } catch (err) {
         setIsLoading(false);

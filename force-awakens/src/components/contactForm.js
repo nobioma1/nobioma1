@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { BiMailSend, BiMessageAltError } from "react-icons/bi";
 import { IoReturnUpBack } from "react-icons/io5";
-import axios from "axios";
 
 import { Button } from "./styled/button";
 
@@ -156,17 +155,16 @@ const ContactForm = ({ closeForm, onSuccess }) => {
   const handleSubmit = event => {
     event.preventDefault();
     setError(null);
-
-    axios
-      .post("/", {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          ...formData,
-          "form-name": event.target.getAttribute("name"),
-          "bot-field": hiddenInputRef.current.value,
-          name: !formData.name ? "Anonymous" : formData.name,
-        }),
-      })
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        ...formData,
+        "form-name": event.target.getAttribute("name"),
+        "bot-field": hiddenInputRef.current.value,
+        name: !formData.name ? "Anonymous" : formData.name,
+      }),
+    })
       .then(res => {
         onSuccess();
         setFormData({
