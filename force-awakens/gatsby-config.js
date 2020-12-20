@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `Noble Obioma`,
-    description: `Hi, I'm Noble. I'm a full-stack software engineer, a lover of music, soon a bassist. My ultimate passion is building software and tackling new problems.`,
-    author: `@nobooln`,
+    description: `I'm a full-stack software engineer, a lover of music, soon a bassist. My ultimate passion is building software and tackling new problems.`,
+    url: "https://www.nobleobioma.com",
+    author: "@nobooln",
+    image: `/preview.png`,
+    keywords: [
+      `Noble Obioma`,
+      `Software Engineer`,
+      `Full-Stack Engineer`,
+      `Web Developer`,
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,69 +1,58 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import { useLocation } from "@reach/router";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, keywords, title, image, article }) {
+  const { pathname } = useLocation();
+  const { site } = useStaticQuery(query);
+
+  const {
+    defaultTitle,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+    author,
+    defaultKeywords,
+  } = site.siteMetadata;
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname}`,
+    keywords: defaultKeywords.concat(keywords),
+  };
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang,
-            }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            meta={[
-              {
-                name: `description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:title`,
-                content: title,
-              },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:type`,
-                content: `website`,
-              },
-              {
-                name: `twitter:card`,
-                content: `summary`,
-              },
-              {
-                name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
-              },
-              {
-                name: `twitter:title`,
-                content: title,
-              },
-              {
-                name: `twitter:description`,
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
-          />
-        );
+    <Helmet
+      title={seo.title}
+      titleTemplate={`%s | ${defaultTitle}`}
+      htmlAttributes={{
+        lang,
       }}
-    />
+    >
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      <meta property="og:type" content={article ? "article" : "website"} />
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      {author && <meta name="twitter:creator" content={author} />}
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && (
+        <meta name="twitter:description" content={seo.description} />
+      )}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      {keywords && keywords.length > 0 && (
+        <meta name="keywords" content={seo.keywords.join(`, `)} />
+      )}
+    </Helmet>
   );
 }
 
@@ -83,12 +72,15 @@ SEO.propTypes = {
 
 export default SEO;
 
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
+const query = graphql`
+  query SEO {
     site {
       siteMetadata {
-        title
-        description
+        defaultTitle: title
+        defaultDescription: description
+        siteUrl: url
+        defaultImage: image
+        defaultKeywords: keywords
         author
       }
     }

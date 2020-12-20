@@ -17,10 +17,7 @@ export default function Home() {
 
   return (
     <Main>
-      <SEO
-        title="Hi, I'm Noble"
-        keywords={[`Noble Obioma`, `Software Engineer`, `Full-Stack Engineer`]}
-      />
+      <SEO title="Hi, I'm Noble" />
       <Header />
       <StyledSectionsWrapper>
         <Hero openContact={() => setContactOpen(true)} />
