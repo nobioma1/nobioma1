@@ -66,12 +66,16 @@ const HeroContent = styled.div`
   h2 {
     color: ${({ theme }) => theme.colors.independence};
   }
+
   .typed-container {
     font-size: 2.25em;
     min-height: 125px;
-    max-width: 70%;
     color: white;
     margin: 3rem 0;
+
+    @media only screen and (min-width: 380px) {
+      max-width: 70%;
+    }
 
     .typed-cursor {
       color: white;
