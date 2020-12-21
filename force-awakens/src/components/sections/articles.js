@@ -90,8 +90,17 @@ const Articles = () => {
         <ArticlesContainer>
           {error}
           {articlesList}
-          {error ? "Go to Blog page" : "Click to see more articles on my Blog"}
-          &rarr;
+          {(articles.length > 5 || error) && (
+            <div>
+              <a
+                href="https://dev.to/nobleobioma"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click to see {error ? "articles" : "more"} &rarr;
+              </a>
+            </div>
+          )}
           {isLoading && <Loading />}
         </ArticlesContainer>
       </section>
