@@ -7,6 +7,8 @@ import {
   FaTwitterSquare,
   FaDev,
 } from "react-icons/fa";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+
 import { StyledLine } from "@styled/line";
 
 const SocialsContainer = styled.div`
@@ -39,15 +41,43 @@ const SocialsContainer = styled.div`
   }
 `;
 
+const Link = ({ children, name, href }) => {
+  return (
+    <OutboundLink
+      name={name}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
+    </OutboundLink>
+  );
+};
+
 const Socials = () => {
   return (
     <SocialsContainer>
-      <FaAt />
-      <FaGithub />
-      <FaLinkedin />
-      <FaTwitterSquare />
-      <FaDev />
-      <StyledLine vertical />
+      <Link name="gmail-nobioma1" href="mailto:nobioma1@gmail.com">
+        <FaAt />
+      </Link>
+      <Link name="github-nobioma1" href="https://github.com/nobioma1">
+        <FaGithub />
+      </Link>
+      <Link
+        name="linkedin-nobleobioma"
+        href="https://linkedin.com/in/nobleobioma"
+      >
+        <FaLinkedin />
+      </Link>
+      <Link name="twitter-nobooln" href="https://twitter.com/nobooln">
+        <FaTwitterSquare />
+      </Link>
+      <Link name="dev-nobleobioma" href="https://dev.to/nobleobioma">
+        <FaDev />
+      </Link>
+      <Link>
+        <StyledLine vertical />
+      </Link>
     </SocialsContainer>
   );
 };
