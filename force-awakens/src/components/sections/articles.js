@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
 
 import Loading from "@shared/loading";
 import ArticleCard from "@components/articleCard";
@@ -91,12 +90,8 @@ const Articles = () => {
         <ArticlesContainer>
           {error}
           {articlesList}
-          <Link to="/blog" className="link">
-            {error
-              ? "Go to Blog page"
-              : "Click to see more articles on my Blog"}
-            &rarr;
-          </Link>
+          {error ? "Go to Blog page" : "Click to see more articles on my Blog"}
+          &rarr;
           {isLoading && <Loading />}
         </ArticlesContainer>
       </section>

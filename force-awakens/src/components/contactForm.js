@@ -125,6 +125,14 @@ const ContactForm = ({ closeForm, onSuccess }) => {
   const [error, setError] = useState(null);
   const hiddenInputRef = useRef();
 
+  const clearForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   const validate = e => {
     const target = e.target;
 
@@ -167,11 +175,7 @@ const ContactForm = ({ closeForm, onSuccess }) => {
     })
       .then(res => {
         onSuccess();
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
+        clearForm();
       })
       .catch(err => {
         console.log(err);
@@ -229,7 +233,12 @@ const ContactForm = ({ closeForm, onSuccess }) => {
           <BiMailSend />
           Send
         </Button>
-        <Button onClick={closeForm}>
+        <Button
+          onClick={() => {
+            clearForm();
+            closeForm();
+          }}
+        >
           <IoReturnUpBack />
           See you later
         </Button>

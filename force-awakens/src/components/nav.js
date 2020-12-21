@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { Link } from "gatsby";
 
 import themeObj from "../theme";
 import ScrollLink from "@shared/scrollLink";
@@ -108,9 +107,6 @@ const Nav = () => {
             {title}
           </ScrollLink>
         ))}
-        <Link to="/blog" className="button">
-          Blog
-        </Link>
       </NavItems>
     </>
   );
