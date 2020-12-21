@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { BiMailSend, BiMessageAltError } from "react-icons/bi";
-import { IoReturnUpBack } from "react-icons/io5";
+import { SiMinutemailer } from "react-icons/si";
 
 import { Button } from "./styled/button";
 
@@ -18,7 +18,7 @@ const FormContainer = styled.form`
 
     @media (min-width: 425px) {
       flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: center;
 
       button {
         width: 45%;
@@ -35,8 +35,15 @@ const FormContainer = styled.form`
     }
   }
 
-  .error-msg {
+  .msg {
     text-align: center;
+  }
+
+  .success {
+    color: #198754;
+  }
+
+  .error {
     color: #dc3545;
   }
 `;
@@ -112,7 +119,7 @@ const InputField = ({
   );
 };
 
-const ContactForm = ({ closeForm, onSuccess }) => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -122,7 +129,7 @@ const ContactForm = ({ closeForm, onSuccess }) => {
     emailValid: false,
     messageValid: false,
   });
-  const [error, setError] = useState(null);
+  const [feedback, setFeedback] = useState(null);
   const hiddenInputRef = useRef();
 
   const clearForm = () => {
@@ -130,6 +137,10 @@ const ContactForm = ({ closeForm, onSuccess }) => {
       name: "",
       email: "",
       message: "",
+    });
+    setValid({
+      emailValid: false,
+      messageValid: false,
     });
   };
 
@@ -162,7 +173,7 @@ const ContactForm = ({ closeForm, onSuccess }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    setError(null);
+    setFeedback(null);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -174,12 +185,17 @@ const ContactForm = ({ closeForm, onSuccess }) => {
       }),
     })
       .then(res => {
-        onSuccess();
         clearForm();
+        setFeedback({
+          type: "success",
+          msg: "Thank you!",
+        });
       })
       .catch(err => {
-        console.log(err);
-        setError("Something went wrong submitting form, please try again!");
+        setFeedback({
+          type: "error",
+          msg: "Something went wrong submitting form, please try again!",
+        });
       });
   };
 
@@ -223,24 +239,20 @@ const ContactForm = ({ closeForm, onSuccess }) => {
         valid={messageValid}
       />
 
-      {error && (
-        <p className="error-msg">
-          <BiMessageAltError /> {error}
+      {feedback && (
+        <p className={`msg ${feedback.type === "error" ? "error" : "success"}`}>
+          {feedback.type === "error" ? (
+            <BiMessageAltError />
+          ) : (
+            <SiMinutemailer />
+          )}{" "}
+          {feedback.msg}
         </p>
       )}
       <div className="btn-container">
         <Button type="submit" disabled={!(emailValid && messageValid)}>
           <BiMailSend />
           Send
-        </Button>
-        <Button
-          onClick={() => {
-            clearForm();
-            closeForm();
-          }}
-        >
-          <IoReturnUpBack />
-          See you later
         </Button>
       </div>
     </FormContainer>

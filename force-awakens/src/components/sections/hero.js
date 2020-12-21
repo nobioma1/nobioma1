@@ -117,7 +117,7 @@ const Avatar = styled(Img)`
   }
 `;
 
-const Hero = ({ openContact }) => {
+const Hero = () => {
   const textRef = useRef();
   const query = useStaticQuery(graphql`
     {
@@ -135,12 +135,12 @@ const Hero = ({ openContact }) => {
     const strings = [
       "I build applications <br />for <span>the Web.</span>",
       "I build applications <br />for <span>the next million users.</span>",
-      'I also JAM <span role="img" aria-label="guitar">🎸</span><span role="img" aria-label="smile">😀</span>.',
+      "Bassist. (In training)",
     ];
 
     const options = {
       strings,
-      typeSpeed: 50,
+      typeSpeed: 60,
       backSpeed: 50,
       backDelay: 500,
       loop: true,
@@ -173,7 +173,7 @@ const Hero = ({ openContact }) => {
             <div className="typed-container">
               <span className="typed" ref={textRef} />
             </div>
-            <GetInTouchBtn onClickHandler={openContact} />
+            <GetInTouchBtn />
             <Avatar
               loading="eager"
               fluid={query.file.childImageSharp.fluid}

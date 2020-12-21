@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import SEO from "@components/seo";
 import Main from "@layouts/main";
@@ -13,23 +13,18 @@ import MaxWidthLayout from "@layouts/maxWidth";
 import { StyledSectionsWrapper } from "@styled/sections";
 
 export default function Home() {
-  const [isContactOpen, setContactOpen] = useState(false);
-
   return (
     <Main>
       <SEO title="Hi, I'm Noble" />
       <Header />
       <StyledSectionsWrapper>
-        <Hero openContact={() => setContactOpen(true)} />
+        <Hero />
         <Featured />
         <MaxWidthLayout bgColor="oxfordBlue" color="#c4c4c4">
           <About />
           <Projects />
           <Articles />
-          <Footer
-            isContactOpen={isContactOpen}
-            setContactOpen={setContactOpen}
-          />
+          <Footer />
         </MaxWidthLayout>
       </StyledSectionsWrapper>
     </Main>
