@@ -14,7 +14,7 @@ const NavItems = styled.div`
   overflow-y: hidden;
   top: 3.75rem;
   left: 0;
-  height: ${({ isOpen }) => (isOpen ? "12rem" : 0)};
+  height: ${({ isOpen }) => (isOpen ? "8rem" : 0)};
   padding: ${({ theme, isOpen }) => (isOpen ? theme.spacing.md : 0)};
   background-color: ${({ theme }) => theme.colors.spaceCadet};
   border-bottom: ${({ isOpen, theme }) =>

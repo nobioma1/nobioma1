@@ -190,6 +190,9 @@ const ContactForm = () => {
           type: "success",
           msg: "Thank you!",
         });
+        setTimeout(() => {
+          setFeedback(null);
+        }, 5000);
       })
       .catch(err => {
         setFeedback({
