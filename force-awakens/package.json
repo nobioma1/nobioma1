@@ -1,0 +1,51 @@
+{
+  "name": "noble-obioma-web-porfolio",
+  "private": true,
+  "description": "web portfolio",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "dayjs": "^1.9.6",
+    "gatsby": "^2.26.1",
+    "gatsby-alias-imports": "^1.0.6",
+    "gatsby-image": "^2.6.0",
+    "gatsby-plugin-anchor-links": "^1.2.0",
+    "gatsby-plugin-manifest": "^2.9.0",
+    "gatsby-plugin-offline": "^3.7.0",
+    "gatsby-plugin-react-helmet": "^3.7.0",
+    "gatsby-plugin-sharp": "^2.9.1",
+    "gatsby-plugin-styled-components": "^3.5.0",
+    "gatsby-source-filesystem": "^2.6.1",
+    "gatsby-transformer-sharp": "^2.7.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.1.0",
+    "react-scroll": "^1.8.1",
+    "styled-components": "^5.2.1",
+    "typed.js": "^2.0.11",
+    "typeface-fresca": "^1.1.13"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nobioma1/nobioma1"
+  },
+  "bugs": {
+    "url": "https://github.com/nobioma1/nobioma1"
+  }
+}
