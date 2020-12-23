@@ -20,7 +20,7 @@ export default {
         "Keep track of the progress on your job applications! Getting a job can be tough, tracking your applications should not.",
       stack: "React, Redux, Firebase, ExpressJs, Redis, Puppeteer, Node-cron.",
       github: "https://github.com/nobioma1/track-opp",
-      link: "https://trackopp.netlify.app/",
+      link: "https://jobhuntpad.com",
     },
     {
       name: "Multi-User Dungeon Game (MUD) ",
