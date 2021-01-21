@@ -27,7 +27,7 @@ const ContactContainer = styled.div`
 
 const Footer = () => {
   return (
-    <div>
+    <div id="connect">
       <SectionTitle title="Let's Connect" color="#FFF" />
       <FooterContainer>
         <ContactContainer>
