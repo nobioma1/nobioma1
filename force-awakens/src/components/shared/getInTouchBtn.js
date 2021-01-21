@@ -58,7 +58,7 @@ const Button = styled(ScrollLink)`
 
 const GetInTouchBtn = ({ onClickHandler }) => {
   return (
-    <Button to="contact" clickHandler={onClickHandler}>
+    <Button to="connect" clickHandler={onClickHandler}>
       <span>Get In Touch &rarr;</span>
       <div />
     </Button>

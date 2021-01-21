@@ -35,16 +35,20 @@ const FormContainer = styled.form`
     }
   }
 
-  .msg {
-    text-align: center;
+  .alert {
+    border-radius: 3px;
   }
 
   .success {
-    color: #198754;
+    color: #81c784;
+    background-color: #1b5e20;
+    border-left: 2px solid white;
   }
 
   .error {
-    color: #dc3545;
+    color: #ffcdd2;
+    background-color: #b71c1c;
+    border-left: 2px solid #ff1744;
   }
 `;
 
@@ -188,7 +192,7 @@ const ContactForm = () => {
         clearForm();
         setFeedback({
           type: "success",
-          msg: "Thank you!",
+          msg: "Message has been sent, Thank you! 🙂",
         });
         setTimeout(() => {
           setFeedback(null);
@@ -243,14 +247,18 @@ const ContactForm = () => {
       />
 
       {feedback && (
-        <p className={`msg ${feedback.type === "error" ? "error" : "success"}`}>
-          {feedback.type === "error" ? (
-            <BiMessageAltError />
-          ) : (
-            <SiMinutemailer />
-          )}{" "}
-          {feedback.msg}
-        </p>
+        <div
+          className={`alert ${feedback.type === "error" ? "error" : "success"}`}
+        >
+          <p>
+            {feedback.type === "error" ? (
+              <BiMessageAltError />
+            ) : (
+              <SiMinutemailer />
+            )}{" "}
+            {feedback.msg}
+          </p>
+        </div>
       )}
       <div className="btn-container">
         <Button type="submit" disabled={!(emailValid && messageValid)}>
