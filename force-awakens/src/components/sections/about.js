@@ -55,10 +55,14 @@ const About = () => {
       <SectionTitle title="About Me" color="#FFF" />
       <section>
         <p>
-          I'm Noble Obioma, a Full-Stack Engineer based in Nigeria. I love every
-          bit of what I do, especially creating solutions to real problems that
-          can be solved using technology and improving already existing
-          solutions. Well, the bugs do not bug me.{" "}
+          I am Noble Obioma, a Full-Stack Engineer; skilled in building
+          performant and reliable web-based applications to solve problems.{" "}
+          <br /> I have experience working in cross-functional teams. I am a
+          Certified AWS Solutions Architect – Associate and have a Bachelors
+          Degree in Computer Science among other certifications. <br /> Besides
+          programming, I am interested in music and traveling to see new places.
+          I enjoy listening to music - I play a few myself, the piano, and a
+          bass guitar(still learning the ropes)..{" "}
           <span role="img" aria-label="smile">
             😁
           </span>
