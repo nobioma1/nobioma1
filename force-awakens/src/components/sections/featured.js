@@ -16,7 +16,7 @@ const Featured = () => {
   const { name, detail, image, ...props } = data.projects[0];
   const query = useStaticQuery(graphql`
     {
-      jobhuntpad: file(relativePath: { eq: "trackopp.png" }) {
+      jobhuntpad: file(relativePath: { eq: "jobhuntpad.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
