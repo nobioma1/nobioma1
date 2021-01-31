@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { MdOpenInNew } from "react-icons/md";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 import { StyledSubTitle } from "@styled/title";
 
@@ -83,6 +83,11 @@ const StyledProject = styled.div`
       padding: 0 3rem;
       justify-content: center;
       `};
+
+      a {
+        text-decoration: none;
+        color: initial;
+      }
     }
 
     & > .img {
@@ -113,7 +118,11 @@ const Project = ({ stack, fixed, title, imageSrc, description, ...props }) => {
         </div>
       </div>
       <div className="desc">
-        <StyledSubTitle>{title}</StyledSubTitle>
+        <a href={props.link} target="__blank">
+          <StyledSubTitle>
+            {title} {props.link && <FaLink size="18px" />}
+          </StyledSubTitle>
+        </a>
         <p>{description}</p>
         <p>&raquo; Built With: {stack}</p>
       </div>
