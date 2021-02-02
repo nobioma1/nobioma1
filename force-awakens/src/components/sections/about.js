@@ -55,18 +55,14 @@ const About = () => {
       <SectionTitle title="About Me" color="#FFF" />
       <section>
         <p>
-          I am Noble Obioma, a Full-Stack Engineer; skilled in building
-          performant and reliable web-based applications to solve problems.{" "}
-          <br /> I have experience working in cross-functional teams. I am a
-          Certified AWS Solutions Architect – Associate and have a Bachelor's
-          Degree in Computer Science among other certifications. <br /> Besides
-          programming, I am interested in music and traveling to see new places.
-          I enjoy listening to music - I play a few myself, the piano, and a
-          bass guitar(still learning the ropes){" "}
-          <span role="img" aria-label="smile">
-            😁
-          </span>
-          .
+          I am Noble Obioma, a full-stack software engineer, a lover of music,
+          and a baby bassist. My ultimate passion is building performant and
+          reliable web-based applications to solve problems and tackling new
+          problems. <br />I am a Certified AWS Solutions Architect – Associate
+          with a Bachelor's Degree in Computer Science and have experience
+          working in cross-functional teams. For fun, I enjoy listening to music
+          and play a few instruments myself (the piano, and a bass guitar), I
+          also love traveling and exploring beautiful places.
         </p>
         <br />
         <div>
